@@ -3,34 +3,39 @@ using TMPro;
 
 public class GunScript : MonoBehaviour
 {
-    //Bullet
+    //Refrence to the bullet prefab
     public GameObject bullet;
 
+    //Refrence to the player
     public GameObject player;
 
-    //Bullet force
+    //The speed at which the bullet fires
     public float shootForce;
 
-    //Bools
+    //Bools for shooting
     private bool shooting;
     public bool readyToShoot;
 
-    //Refrences
+    //Refrence to the bullet spawn point
     public Transform bulletSpawn;
+    //Refrence to the point that the bullet fires towards
     public Transform shootPoint;
 
+    //Refrence to the UI text that tells you if you can shoot or not
     public TMP_Text canShootText;
 
     private void Awake()
     {
-        //Make sure the magazine is full
+        //Make sure that the player is able to shoot
         readyToShoot = true;
     }
 
     private void Update()
     {
+        //Calling the input method
         MyInput();
 
+        //If the player is able to shoot, the text displays it so. If not, the text reflects that
         if(readyToShoot == true)
         {
             canShootText.text = "Can shoot: Yes";
@@ -41,6 +46,7 @@ public class GunScript : MonoBehaviour
         }
     }
 
+    //A method for shooting. If the player has ammo, presses the LMB, and they are currently aiming, the Shoot method is called
     private void MyInput()
     {
         shooting = Input.GetKeyDown(KeyCode.Mouse0);
@@ -51,11 +57,13 @@ public class GunScript : MonoBehaviour
         }
     }
 
+    //A method that handles shooting
     private void Shoot()
     {
+        //Makes it so that the player cannot shoot again until they're done reloading
         readyToShoot = false;
 
-        //Calculate direction from attackPoint to targetPoint
+        //Calculate direction the bullet flies towards
         Vector3 direction = shootPoint.position - bulletSpawn.position;
 
         //Instantiate bullet
