@@ -12,6 +12,13 @@ public class GameManager : MonoBehaviour
     //The number used to spawn the player in the correct location when entering a room
     public int entryNumber;
 
+    //Objects in the rooms
+    public Vector3 objectOnePosition;
+    public Vector3 objectOneRotation;
+
+    public Vector3 objectTwoPosition;
+    public Vector3 objectTwoRotation;
+
     private void Awake()
     {
         //This code is used to make sure there are never more than one game manager
