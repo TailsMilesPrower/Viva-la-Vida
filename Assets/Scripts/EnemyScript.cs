@@ -8,6 +8,11 @@ public class EnemyScript : MonoBehaviour
     //A refrence to the player
     public GameObject player;
 
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
+
     // Update is called once per frame
     void Update()
     {

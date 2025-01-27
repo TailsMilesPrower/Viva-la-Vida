@@ -40,11 +40,6 @@ public class Movement : MonoBehaviour
         backing
     }
 
-    private void Start()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     // Update is called once per frame
     void Update()
     {
