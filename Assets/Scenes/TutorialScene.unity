@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 205, y: -186.22}
-  m_SizeDelta: {x: 392.46, y: 218.31}
+  m_AnchoredPosition: {x: 205, y: -213.36}
+  m_SizeDelta: {x: 392.46, y: 272.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728657041
 MonoBehaviour:
@@ -183,12 +183,16 @@ MonoBehaviour:
     click on the gunpowder first, and then click on the bullet.
 
 
-    If you want
-    a refresher on the controlls, just open your inventory with Tab
+    You can also
+    shoot the rope of the chandeleer to make it fall down. It''ll kill both enemies
+    if it lands on them
 
 
-    Sorry for
-    the long explanation, you can start :D'
+    If you want a refresher on the controlls, just open
+    your inventory with Tab
+
+
+    Sorry for the long explanation, you can start :D'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -215,8 +219,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -301,8 +305,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -196.22998, y: -259}
-  m_SizeDelta: {x: 392.46, y: 363.87}
+  m_AnchoredPosition: {x: -204.84, y: -259}
+  m_SizeDelta: {x: 375.24, y: 363.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1093029442
 MonoBehaviour:
@@ -344,17 +348,21 @@ MonoBehaviour:
     You cannot move while aiming
 
 
-    You
-    can move from room to room
+    Press
+    F to open doors
 
 
-    There are enemies to shoot in some rooms. Currently
-    they respawn if you leave the room and come back.
+    You can move from room to room
 
 
-    Some rooms have colored
-    cubes in them. You can walk into them to move them. They will be in the same
-    position if you leave the room and come back. These will be used for some puzzles.'
+    There are enemies
+    to shoot in some rooms. Currently they respawn if you leave the room and come
+    back.
+
+
+    Some rooms have colored cubes in them. You can walk into them to
+    move them. They will be in the same position if you leave the room and come back.
+    These will be used for some puzzles.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -381,8 +389,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
