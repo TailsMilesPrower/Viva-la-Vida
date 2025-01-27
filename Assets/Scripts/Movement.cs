@@ -40,6 +40,24 @@ public class Movement : MonoBehaviour
         backing
     }
 
+    public GameObject gameManager;
+
+    private void Awake()
+    {
+        if(gameManager == null)
+        {
+            gameManager = GameObject.Find("GameManager");
+        }
+        if(gameManager.GetComponent<GameManager>().player == null)
+        {
+            gameManager.GetComponent<GameManager>().player = this.gameObject;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
