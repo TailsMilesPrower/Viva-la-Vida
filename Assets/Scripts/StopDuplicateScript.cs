@@ -2,38 +2,25 @@ using UnityEngine;
 
 public class StopDuplicateScript : MonoBehaviour
 {
+    //A refrence to the game manager
     public GameObject gameManager;
 
-    public bool isCanvas;
-    public bool isEventSystem;
 
     private void Awake()
     {
+        //Assigns the game manager
         if(gameManager == null)
         {
             gameManager = GameObject.Find("GameManager");
         }
-        if(isCanvas) 
+        //Makes sure there is never more than one canvas in the scene
+        if (gameManager.GetComponent<GameManager>().canvas == null)
         {
-            if (gameManager.GetComponent<GameManager>().canvas == null)
-            {
-                gameManager.GetComponent<GameManager>().canvas = this.gameObject;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            gameManager.GetComponent<GameManager>().canvas = this.gameObject;
         }
-        if(isEventSystem)
+        else
         {
-            if (gameManager.GetComponent<GameManager>().eventSystem == null)
-            {
-                gameManager.GetComponent<GameManager>().eventSystem = this.gameObject;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
     }
 }

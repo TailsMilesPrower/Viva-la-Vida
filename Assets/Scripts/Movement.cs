@@ -40,14 +40,17 @@ public class Movement : MonoBehaviour
         backing
     }
 
+    //A refrence to the game manager
     public GameObject gameManager;
 
     private void Awake()
     {
+        //If the game manager is set to null, the script will find it and assign it
         if(gameManager == null)
         {
             gameManager = GameObject.Find("GameManager");
         }
+        //The code below makes sure that there is only ever one player in the scene
         if(gameManager.GetComponent<GameManager>().player == null)
         {
             gameManager.GetComponent<GameManager>().player = this.gameObject;
