@@ -9,6 +9,6 @@ public class RestartGun : MonoBehaviour
     public void ResetGun()
     {
         gun.GetComponent<GunScript>().readyToShoot = true;
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }

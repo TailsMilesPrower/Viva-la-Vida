@@ -14,10 +14,8 @@ public class GameManager : MonoBehaviour
 
     //Objects in the rooms
     public Vector3 objectOnePosition;
-    public Vector3 objectOneRotation;
 
     public Vector3 objectTwoPosition;
-    public Vector3 objectTwoRotation;
 
     private void Awake()
     {

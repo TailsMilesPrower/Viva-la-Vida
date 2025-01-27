@@ -15,10 +15,13 @@ public class DoorScript : MonoBehaviour
     //A bool to help check if the player is by the door
     private bool playerInDoor = false;
 
+    public GameObject roomCheck;
+
     private void Start()
     {
         //Assigning the game manager
         gameManager = GameObject.Find("GameManager");
+        roomCheck = GameObject.Find("RoomEntryCheck");
     }
 
     private void Update()
@@ -61,6 +64,7 @@ public class DoorScript : MonoBehaviour
     //A function that loads the next scene
     public void OpenDoor()
     {
+        roomCheck.GetComponent<RoomEntryCheck>().SaveObjectPositions();
         Debug.Log("Loading next scene");
         SceneManager.LoadScene(sceneName);
     }
