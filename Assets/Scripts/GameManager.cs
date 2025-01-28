@@ -14,8 +14,12 @@ public class GameManager : MonoBehaviour
 
     //Objects in the rooms
     public Vector3 objectOnePosition;
-
     public Vector3 objectTwoPosition;
+
+    //Enemies in the room
+    public bool enemyOneDead = false;
+    public bool enemyTwoDead = false;
+    public bool enemyThreeDead = false;
 
     private void Awake()
     {

@@ -18,6 +18,16 @@ public class RoomEntryCheck : MonoBehaviour
     public bool isObjectOne;
     public bool isObjectTwo;
 
+    //Enemies
+    public GameObject enemyOne;
+    public GameObject enemyTwo;
+    public GameObject enemyThree;
+
+    //Enemy bools
+    public bool isEnemyOne;
+    public bool isEnemyTwo;
+    public bool isEnemyThree;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +39,7 @@ public class RoomEntryCheck : MonoBehaviour
         //Sets the player's position to the entry point
         player.transform.position = entryPoints[entryNum].transform.position;
         player.transform.rotation = entryPoints[entryNum].transform.rotation;
+        //Sets the object positions
         if(isObjectOne)
         {
             objectOne.position = gameManager.GetComponent<GameManager>().objectOnePosition;
@@ -36,6 +47,29 @@ public class RoomEntryCheck : MonoBehaviour
         if(isObjectTwo)
         {
             objectTwo.position = gameManager.GetComponent<GameManager>().objectTwoPosition;
+        }
+
+        //Sets the status of the enemies
+        if(isEnemyOne)
+        {
+            if(gameManager.GetComponent<GameManager>().enemyOneDead == true)
+            {
+                Destroy(enemyOne);
+            }
+        }
+        if (isEnemyTwo)
+        {
+            if (gameManager.GetComponent<GameManager>().enemyTwoDead == true)
+            {
+                Destroy(enemyTwo);
+            }
+        }
+        if (isEnemyThree)
+        {
+            if (gameManager.GetComponent<GameManager>().enemyThreeDead == true)
+            {
+                Destroy(enemyThree);
+            }
         }
     }
 

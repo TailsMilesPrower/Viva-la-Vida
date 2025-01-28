@@ -1125,6 +1125,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
+      propertyPath: enemyNum
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7793298037032126722, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -1174,6 +1178,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc29346653880de458760774721b9699, type: 3}
+--- !u!1 &818031151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7793298037032126722, guid: bc29346653880de458760774721b9699, type: 3}
+  m_PrefabInstance: {fileID: 818031150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &921004099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,6 +2479,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
+      propertyPath: enemyNum
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7793298037032126722, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -2519,6 +2532,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc29346653880de458760774721b9699, type: 3}
+--- !u!1 &1485490958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7793298037032126722, guid: bc29346653880de458760774721b9699, type: 3}
+  m_PrefabInstance: {fileID: 1485490957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1525710450
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,6 +3494,22 @@ PrefabInstance:
     - target: {fileID: 8789312141499988408, guid: 8484f0f22a0529541bb12dab3d1de8a6, type: 3}
       propertyPath: m_Name
       value: RoomEntryCheck
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907324268955526472, guid: 8484f0f22a0529541bb12dab3d1de8a6, type: 3}
+      propertyPath: enemyOne
+      value: 
+      objectReference: {fileID: 818031151}
+    - target: {fileID: 8907324268955526472, guid: 8484f0f22a0529541bb12dab3d1de8a6, type: 3}
+      propertyPath: enemyTwo
+      value: 
+      objectReference: {fileID: 1485490958}
+    - target: {fileID: 8907324268955526472, guid: 8484f0f22a0529541bb12dab3d1de8a6, type: 3}
+      propertyPath: isEnemyOne
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907324268955526472, guid: 8484f0f22a0529541bb12dab3d1de8a6, type: 3}
+      propertyPath: isEnemyTwo
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8907324268955526472, guid: 8484f0f22a0529541bb12dab3d1de8a6, type: 3}
       propertyPath: entryPoints.Array.size

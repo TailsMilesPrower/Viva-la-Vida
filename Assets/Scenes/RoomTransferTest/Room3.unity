@@ -203,6 +203,14 @@ PrefabInstance:
       value: RoomEntryCheck
       objectReference: {fileID: 0}
     - target: {fileID: 8907324268955526472, guid: 8484f0f22a0529541bb12dab3d1de8a6, type: 3}
+      propertyPath: enemyThree
+      value: 
+      objectReference: {fileID: 407235812}
+    - target: {fileID: 8907324268955526472, guid: 8484f0f22a0529541bb12dab3d1de8a6, type: 3}
+      propertyPath: isEnemyThree
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907324268955526472, guid: 8484f0f22a0529541bb12dab3d1de8a6, type: 3}
       propertyPath: entryPoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -509,6 +517,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 294159496}
+    - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
+      propertyPath: enemyNum
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7793298037032126722, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -558,6 +570,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc29346653880de458760774721b9699, type: 3}
+--- !u!1 &407235812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7793298037032126722, guid: bc29346653880de458760774721b9699, type: 3}
+  m_PrefabInstance: {fileID: 407235811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &486375842
 GameObject:
   m_ObjectHideFlags: 0

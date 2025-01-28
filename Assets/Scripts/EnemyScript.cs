@@ -8,9 +8,14 @@ public class EnemyScript : MonoBehaviour
     //A refrence to the player
     public GameObject player;
 
+    public int enemyNum;
+
+    private GameObject gameManager;
+
     private void Start()
     {
         player = GameObject.Find("Player");
+        gameManager = GameObject.Find("GameManager");
     }
 
     // Update is called once per frame
@@ -30,6 +35,18 @@ public class EnemyScript : MonoBehaviour
             if(collision.gameObject.CompareTag("Bullet"))
             {
                 Destroy(collision.gameObject);
+            }
+            if(enemyNum == 1)
+            {
+                gameManager.GetComponent<GameManager>().enemyOneDead = true;
+            }
+            else if (enemyNum == 2)
+            {
+                gameManager.GetComponent<GameManager>().enemyTwoDead = true;
+            }
+            else if (enemyNum == 3)
+            {
+                gameManager.GetComponent<GameManager>().enemyThreeDead = true;
             }
             Destroy(gameObject);
         }
