@@ -4,7 +4,7 @@ public class FallChandeleer : MonoBehaviour
 {
     //Refrences to the rope and the chandeleer
     public GameObject rope;
-    public GameObject Chandeleer;
+    public GameObject chandeleer;
 
     //If its hit by a bullet, both the bullet and the rope will disappear.
     private void OnCollisionEnter(Collision collision)
@@ -15,7 +15,7 @@ public class FallChandeleer : MonoBehaviour
             Destroy(rope);
             rope = null;
             //Makes the chandeleer fall down
-            Chandeleer.GetComponent<Rigidbody>().useGravity = true;
+            chandeleer.GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }
