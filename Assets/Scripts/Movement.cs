@@ -31,13 +31,14 @@ public class Movement : MonoBehaviour
     //A bool which will be used to check if the player is aiming
     public bool aiming;
 
+    public Transform orientation;
+
     public MovementState state;
 
     public enum MovementState
     {
         walking,
-        sprinting,
-        backing
+        sprinting
     }
 
     //A refrence to the game manager
@@ -117,12 +118,6 @@ public class Movement : MonoBehaviour
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
         }
-        //Holding down the S key means the player is going in reverse, meaning they move slower
-        else if(Input.GetKey(KeyCode.S))
-        {
-            state = MovementState.backing;
-            moveSpeed = walkSpeed / 2;
-        }
         //Otherwise, the player moves at normal speed
         else
         {
@@ -137,21 +132,31 @@ public class Movement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        //This rotates the player if they hold down the horizontal inputs
-        transform.Rotate(0, (horizontalInput * rotationSpeed * Time.deltaTime), 0);
+        if(aiming)
+        {
+            //This rotates the player if they hold down the horizontal inputs
+            transform.Rotate(0, (horizontalInput * rotationSpeed * Time.deltaTime), 0);
+        }
     }
 
     //A function that takes care of movement
     private void MovePlayer()
     {
         //Calculate the movement direction
-        moveDirection = transform.forward * verticalInput;
+        moveDirection = (Vector3.forward * verticalInput) + (Vector3.right * horizontalInput);
 
         //Player can only move if they are not aiming their gun
-        if(aiming == false)
+        if(!aiming)
         {
             //Moves the player in the calculated direction at an increased movement speed
             rb.AddForce((moveDirection.normalized * moveSpeed * 10f), ForceMode.Force);
+            //transform.rotation = Quaternion.LookRotation(moveDirection.normalized);
+            if(moveDirection != Vector3.zero)
+            {
+                Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 500 * Time.deltaTime);
+            }
         }
     }
 
