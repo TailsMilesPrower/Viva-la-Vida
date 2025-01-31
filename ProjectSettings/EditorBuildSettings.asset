@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoomTransferTest/Room4.unity
     guid: 7802d447d377df4418a2eca1b4a8310a
+  - enabled: 1
+    path: Assets/Scenes/Lyubo's Scenes/Room 1_1.unity
+    guid: 5a710c67ddec8e343a8f77450bc912b0
+  - enabled: 1
+    path: Assets/Scenes/Lyubo's Scenes/Room1_2.unity
+    guid: ab61b5ac9ae39a546b3f947edb78a12b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
