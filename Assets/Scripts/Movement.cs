@@ -69,7 +69,7 @@ public class Movement : MonoBehaviour
     {
         if(cam == null)
         {
-            cam = GameObject.Find("Camera");
+            cam = GameObject.Find("Main Camera");
         }
 
         //Calling the input function
@@ -149,8 +149,10 @@ public class Movement : MonoBehaviour
     //A function that takes care of movement
     private void MovePlayer()
     {
+        moveDirection = (cam.transform.forward * verticalInput) + (cam.transform.right * horizontalInput);
+
         //Calculate the movement direction
-        moveDirection = (Vector3.forward * verticalInput) + (Vector3.right * horizontalInput);
+        //moveDirection = (Vector3.forward * verticalInput) + (Vector3.right * horizontalInput);
 
         //Player can only move if they are not aiming their gun
         if(!aiming)
