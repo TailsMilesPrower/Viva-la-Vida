@@ -35,6 +35,8 @@ public class Movement : MonoBehaviour
 
     public MovementState state;
 
+    private GameObject cam;
+
     public enum MovementState
     {
         walking,
@@ -65,6 +67,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(cam == null)
+        {
+            cam = GameObject.Find("Camera");
+        }
+
         //Calling the input function
         MyInput();
         //Calling the state function
