@@ -62,6 +62,10 @@ public class Movement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (cam == null)
+        {
+            cam = GameObject.Find("Main Camera");
+        }
     }
 
     // Update is called once per frame
