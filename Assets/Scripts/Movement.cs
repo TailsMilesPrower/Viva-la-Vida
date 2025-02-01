@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -31,11 +32,7 @@ public class Movement : MonoBehaviour
     //A bool which will be used to check if the player is aiming
     public bool aiming;
 
-    public Transform orientation;
-
     public MovementState state;
-
-    private GameObject cam;
 
     public enum MovementState
     {
@@ -58,24 +55,12 @@ public class Movement : MonoBehaviour
         {
             gameManager.GetComponent<GameManager>().player = this.gameObject;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-        if (cam == null)
-        {
-            cam = GameObject.Find("Main Camera");
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(cam == null)
-        {
-            cam = GameObject.Find("Main Camera");
-        }
-
         //Calling the input function
         MyInput();
         //Calling the state function

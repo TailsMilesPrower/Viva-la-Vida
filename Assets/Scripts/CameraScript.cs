@@ -1,23 +1,30 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class CameraScript : MonoBehaviour
 {
-    public GameObject target;
-    public Vector3 offset = new Vector3(0, 5, -10);
-    public float smoothSpeed = 5f;
+    public float cameraOffsetValue = -5.8f;
 
-    private void Start()
-    {
-        target = GameObject.Find("Player");
-    }
+    private float cameraOffsetValueMinimum = -5.8f;
+    private float cameraOffsetValueMaximum = -8.25f;
 
-    void LateUpdate()
+    private void Update()
     {
-        if (target != null)
+        GetComponent<CinemachineFollow>().FollowOffset.z = cameraOffsetValue;
+
+        if (Input.GetKey(KeyCode.S))
         {
-            //Vector3 desiredPosition = target.position + offset;
-            //transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
-            transform.LookAt(target.transform.position);
+            if (cameraOffsetValue > cameraOffsetValueMaximum)
+            {
+                cameraOffsetValue -= 2f * Time.deltaTime;
+            }
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            if (cameraOffsetValue < cameraOffsetValueMinimum)
+            {
+                cameraOffsetValue += 2f * Time.deltaTime;
+            }
         }
     }
 }
