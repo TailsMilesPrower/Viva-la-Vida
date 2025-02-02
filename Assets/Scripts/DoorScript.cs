@@ -10,7 +10,7 @@ public class DoorScript : MonoBehaviour
     public string sceneName;
 
     //A refrence to the game manager
-    public GameObject gameManager;
+    public GameManager gameManager;
 
     //A bool to help check if the player is by the door
     private bool playerInDoor = false;
@@ -20,7 +20,7 @@ public class DoorScript : MonoBehaviour
     private void Start()
     {
         //Assigning the game manager
-        gameManager = GameObject.Find("GameManager");
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         roomCheck = GameObject.Find("RoomEntryCheck");
     }
 
@@ -32,7 +32,7 @@ public class DoorScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 //The door accesses the game manager and assigns its entry number as the same as the door number
-                gameManager.GetComponent<GameManager>().entryNumber = doorNumber;
+                gameManager.entryNumber = doorNumber;
                 //Then, it calls the function that loads the next scene
                 OpenDoor();
             }
@@ -66,6 +66,6 @@ public class DoorScript : MonoBehaviour
     {
         roomCheck.GetComponent<RoomEntryCheck>().SaveObjectPositions();
         Debug.Log("Loading next scene");
-        //SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 }
