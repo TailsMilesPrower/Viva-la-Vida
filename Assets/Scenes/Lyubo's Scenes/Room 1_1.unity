@@ -7295,6 +7295,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1003096501}
+    - target: {fileID: 4232964553878461502, guid: f1be4bf64473e954a8de213d109461aa, type: 3}
+      propertyPath: maxCamPosition.x
+      value: 13.96708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232964553878461502, guid: f1be4bf64473e954a8de213d109461aa, type: 3}
+      propertyPath: minCamPosition.x
+      value: -1.124598
+      objectReference: {fileID: 0}
     - target: {fileID: 8069179711372027059, guid: f1be4bf64473e954a8de213d109461aa, type: 3}
       propertyPath: m_Name
       value: Main Camera
