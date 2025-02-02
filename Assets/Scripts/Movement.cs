@@ -72,11 +72,10 @@ public class Movement : MonoBehaviour
         //Calling the function that limits the player's movement speed, so the player doesn't accelerate infinetly
         SpeedControl();
 
-        //Applying the drag to the Rigidbody
         rb.linearDamping = groundDrag;
 
         //When the player holds down the RMB, the gun appears and the player starts aiming
-        if(Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1))
         {
             aiming = true;
             gun.GetComponent<Renderer>().enabled = true;
