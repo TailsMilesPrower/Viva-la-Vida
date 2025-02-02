@@ -109,6 +109,8 @@ public class RoomEntryCheck : MonoBehaviour
         //Sets the camera position
         playerCamera.transform.position = player.transform.position + cameraOffset;
 
+        entryPoints[entryNum].GetComponent<EntryPointCameraClamp>().AssignClamp();
+
         yield return new WaitForSeconds(0.1f);
 
         rb.isKinematic = false;
