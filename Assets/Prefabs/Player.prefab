@@ -516,7 +516,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &5061211484470418040
@@ -542,6 +542,7 @@ MonoBehaviour:
   inventoryScreen: {fileID: 0}
   aiming: 0
   state: 0
+  gameManager: {fileID: 0}
 --- !u!1 &8404647320731079349
 GameObject:
   m_ObjectHideFlags: 0
