@@ -66,6 +66,6 @@ public class DoorScript : MonoBehaviour
     {
         roomCheck.GetComponent<RoomEntryCheck>().SaveObjectPositions();
         Debug.Log("Loading next scene");
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadScene(sceneName);
     }
 }
