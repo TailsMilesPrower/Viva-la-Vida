@@ -9,6 +9,8 @@ public class RoomEntryCheck : MonoBehaviour
     public GameObject player;
     //A refrence to the game manager
     public GameObject gameManager;
+    //A refrence to the player camera
+    public GameObject playerCamera;
 
     //Objects
     public Transform objectOne;
@@ -31,14 +33,23 @@ public class RoomEntryCheck : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Assigns the player and game manager
+        //Assigns the player,game manager, and camera
         gameManager = GameObject.Find("GameManager");
         player = GameObject.Find("Player");
+        playerCamera = GameObject.Find("Main Camera");
         //Gets the entry number in the game manager (assigned from the door in the previous scene
         int entryNum = gameManager.GetComponent<GameManager>().entryNumber;
+
+        //Calculates the offset between the player and the camera
+        Vector3 playerPos = player.transform.position;
+        Vector3 cameraOffset = playerCamera.transform.position - playerPos;
+
         //Sets the player's position to the entry point
-        player.transform.position = entryPoints[entryNum].transform.position;
-        player.transform.rotation = entryPoints[entryNum].transform.rotation;
+        player.transform.position = entryPoints[entryNum].position;
+        player.transform.rotation = entryPoints[entryNum].rotation;
+        //Sets the camera position
+        playerCamera.transform.position = player.transform.position + cameraOffset;
+
         //Sets the object positions
         if(isObjectOne)
         {
@@ -70,6 +81,11 @@ public class RoomEntryCheck : MonoBehaviour
             {
                 Destroy(enemyThree);
             }
+        }
+        if(player.transform.position != entryPoints[entryNum].position)
+        {
+            Debug.LogError("Error: Player not spawned correctly");
+            player.transform.position = entryPoints[entryNum].position;
         }
     }
 

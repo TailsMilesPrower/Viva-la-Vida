@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     //Object refrences
     public GameObject player;
     public GameObject canvas;
+    public GameObject playerCamera;
 
     //The number used to spawn the player in the correct location when entering a room
     public int entryNumber;

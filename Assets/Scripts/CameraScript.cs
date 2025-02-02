@@ -1,8 +1,9 @@
-using Unity.Cinemachine;
 using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
+    private static CameraScript instance;
+
     public GameObject player;
 
     public float smoothSpeed = 5f;
@@ -14,6 +15,19 @@ public class CameraScript : MonoBehaviour
 
     public Vector3 minCamPosition;
     public Vector3 maxCamPosition;
+
+    private void Awake()
+    {
+        //This code is used to make sure there are never more than one camera
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Update()
     {

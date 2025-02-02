@@ -2,21 +2,17 @@ using UnityEngine;
 
 public class StopDuplicateScript : MonoBehaviour
 {
+    private static StopDuplicateScript instance;
+
     //A refrence to the game manager
     public GameObject gameManager;
 
-
     private void Awake()
     {
-        //Assigns the game manager
-        if(gameManager == null)
+        //This code is used to make sure there are never more than one camera
+        if (instance == null)
         {
-            gameManager = GameObject.Find("GameManager");
-        }
-        //Makes sure there is never more than one canvas in the scene
-        if (gameManager.GetComponent<GameManager>().canvas == null)
-        {
-            gameManager.GetComponent<GameManager>().canvas = this.gameObject;
+            instance = this;
         }
         else
         {

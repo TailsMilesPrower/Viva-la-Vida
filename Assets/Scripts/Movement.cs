@@ -1,8 +1,9 @@
-using Unity.Cinemachine;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    private static Movement instance;
+
     //A refrence to the player Rigidbody
     public Rigidbody rb;
 
@@ -45,17 +46,20 @@ public class Movement : MonoBehaviour
 
     private void Awake()
     {
+        // This code is used to make sure there are never more than one player
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         //If the game manager is set to null, the script will find it and assign it
-        if(gameManager == null)
+        if (gameManager == null)
         {
             gameManager = GameObject.Find("GameManager");
         }
-        //The code below makes sure that there is only ever one player in the scene
-        if(gameManager.GetComponent<GameManager>().player == null)
-        {
-            gameManager.GetComponent<GameManager>().player = this.gameObject;
-        }
-        
     }
 
     // Update is called once per frame
