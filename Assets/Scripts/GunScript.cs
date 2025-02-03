@@ -61,7 +61,7 @@ public class GunScript : MonoBehaviour
     private void Shoot()
     {
         //Makes it so that the player cannot shoot again until they're done reloading
-        readyToShoot = false;
+        //readyToShoot = false;
 
         //Calculate direction the bullet flies towards
         Vector3 direction = shootPoint.position - bulletSpawn.position;
