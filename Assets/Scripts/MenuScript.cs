@@ -5,6 +5,6 @@ public class MenuScript : MonoBehaviour
 {
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Room1");
+        SceneManager.LoadScene("Room1_1");
     }
 }
