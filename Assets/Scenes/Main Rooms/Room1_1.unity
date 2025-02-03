@@ -3310,7 +3310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439286263002396067, guid: d9c2d29f2b1a74346bb949f4ab29efc7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -169.07
+      value: -162.11
       objectReference: {fileID: 0}
     - target: {fileID: 1439286263002396067, guid: d9c2d29f2b1a74346bb949f4ab29efc7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7977,6 +7977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2103271113099047929, guid: d96c6dcf571515f48be8bf97cfe5e021, type: 3}
+      propertyPath: objectTwoPosition.x
+      value: 0.94
+      objectReference: {fileID: 0}
     - target: {fileID: 7137961382319958337, guid: d96c6dcf571515f48be8bf97cfe5e021, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.8183155
@@ -8614,7 +8618,7 @@ MonoBehaviour:
   dialougeText: {fileID: 0}
   dialouge:
   - The door is locked
-  playerInRange: 1
+  playerInRange: 0
   lineNumber: 0
   outlineEneabled: 0
 --- !u!65 &8384127631016873285
@@ -8636,8 +8640,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.8792737}
-  m_Center: {x: 0, y: 0, z: 0.45427135}
+  m_Size: {x: 1, y: 1, z: 0.6037203}
+  m_Center: {x: 0, y: 0, z: 0.3164946}
 --- !u!4 &8403244568805681585
 Transform:
   m_ObjectHideFlags: 0
