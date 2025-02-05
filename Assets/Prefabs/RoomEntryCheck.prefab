@@ -47,3 +47,16 @@ MonoBehaviour:
   entryPoints: []
   player: {fileID: 0}
   gameManager: {fileID: 0}
+  playerCamera: {fileID: 0}
+  fadeScreen: {fileID: 0}
+  timeToFade: 1
+  objectOne: {fileID: 0}
+  objectTwo: {fileID: 0}
+  isObjectOne: 0
+  isObjectTwo: 0
+  enemyOne: {fileID: 0}
+  enemyTwo: {fileID: 0}
+  enemyThree: {fileID: 0}
+  isEnemyOne: 0
+  isEnemyTwo: 0
+  isEnemyThree: 0

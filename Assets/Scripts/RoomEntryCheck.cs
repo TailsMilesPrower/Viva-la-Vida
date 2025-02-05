@@ -6,6 +6,7 @@ public class RoomEntryCheck : MonoBehaviour
 {
     //An array of all the entry points the room has
     public Transform[] entryPoints;
+    public Transform[] cameraStartPoints;
 
     //A refrence to the player
     public GameObject player;
@@ -13,6 +14,13 @@ public class RoomEntryCheck : MonoBehaviour
     public GameObject gameManager;
     //A refrence to the player camera
     public GameObject playerCamera;
+
+    public CanvasGroup fadeScreen;
+
+    private bool fadeOut = true;
+
+    public float timeToFade;
+
 
     //Objects
     public Transform objectOne;
@@ -39,11 +47,12 @@ public class RoomEntryCheck : MonoBehaviour
         gameManager = GameObject.Find("GameManager");
         player = GameObject.Find("Player");
         playerCamera = GameObject.Find("Main Camera");
+        fadeScreen = GameObject.Find("FadeScreen").GetComponent<CanvasGroup>();
 
         StartCoroutine(MovePlayer());
 
         //Sets the object positions
-        if(isObjectOne)
+        if (isObjectOne)
         {
             objectOne.position = gameManager.GetComponent<GameManager>().objectOnePosition;
         }
@@ -77,6 +86,21 @@ public class RoomEntryCheck : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (fadeOut)
+        {
+            if (fadeScreen.alpha >= 0)
+            {
+                fadeScreen.alpha -= timeToFade * Time.deltaTime;
+                if (fadeScreen.alpha == 0)
+                {
+                    fadeOut = false;
+                }
+            }
+        }
+    }
+
     public void SaveObjectPositions()
     {
         if(isObjectOne)
@@ -97,19 +121,16 @@ public class RoomEntryCheck : MonoBehaviour
         Rigidbody rb = player.gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = true;
 
-        //Calculates the offset between the player and the camera
-        Vector3 playerPos = player.transform.position;
-        Vector3 cameraOffset = playerCamera.transform.position - playerPos;
-
         //Sets the player's position to the entry point
         player.transform.position = entryPoints[entryNum].position;
         player.transform.rotation = entryPoints[entryNum].rotation;
 
-
         //Sets the camera position
-        playerCamera.transform.position = player.transform.position + cameraOffset;
+        playerCamera.transform.position = cameraStartPoints[entryNum].position;
 
         yield return new WaitForSeconds(0.1f);
+
+        player.GetComponent<Movement>().enabled = true;
 
         rb.isKinematic = false;
     }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,16 +18,26 @@ public class DoorScript : MonoBehaviour
 
     public GameObject roomCheck;
 
+    public CanvasGroup fadeScreen;
+
+    private bool fadeIn = false;
+
+    public float timeToFade;
+
+    public GameObject player;
+
     private void Start()
     {
         //Assigning the game manager
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         roomCheck = GameObject.Find("RoomEntryCheck");
+        fadeScreen = GameObject.Find("FadeScreen").GetComponent<CanvasGroup>();
+        player = GameObject.Find("Player");
     }
 
     private void Update()
     {
-        //If the player is by the door and press F
+        //If the player is by the door and press E
         if(playerInDoor)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -34,7 +45,18 @@ public class DoorScript : MonoBehaviour
                 //The door accesses the game manager and assigns its entry number as the same as the door number
                 gameManager.entryNumber = doorNumber;
                 //Then, it calls the function that loads the next scene
-                OpenDoor();
+                StartCoroutine(OpenDoor());
+            }
+        }
+        if (fadeIn)
+        {
+            if (fadeScreen.alpha < 1)
+            {
+                fadeScreen.alpha += timeToFade * Time.deltaTime;
+                if (fadeScreen.alpha >= 1)
+                {
+                    fadeIn = false;
+                }
             }
         }
     }
@@ -62,10 +84,14 @@ public class DoorScript : MonoBehaviour
     }
 
     //A function that loads the next scene
-    public void OpenDoor()
+    public IEnumerator OpenDoor()
     {
         roomCheck.GetComponent<RoomEntryCheck>().SaveObjectPositions();
         Debug.Log("Loading next scene");
+        player.GetComponent<Movement>().enabled = false;
+        fadeIn = true; 
+        player.GetComponent<Movement>().enabled = false;
+        yield return new WaitForSeconds(timeToFade + 0.2f);
         SceneManager.LoadScene(sceneName);
     }
 }
