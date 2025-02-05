@@ -23,7 +23,7 @@ public class DialougeScript : MonoBehaviour
     {
         if(playerInRange)
         {
-            if(Input.GetKeyDown(KeyCode.F))
+            if(Input.GetKeyDown(KeyCode.E))
             {
                 if(lineNumber < dialouge.Length)
                 {

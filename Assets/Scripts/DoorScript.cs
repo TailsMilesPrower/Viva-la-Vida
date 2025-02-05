@@ -29,7 +29,7 @@ public class DoorScript : MonoBehaviour
         //If the player is by the door and press F
         if(playerInDoor)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 //The door accesses the game manager and assigns its entry number as the same as the door number
                 gameManager.entryNumber = doorNumber;

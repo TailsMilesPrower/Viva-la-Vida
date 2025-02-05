@@ -89,7 +89,7 @@ public class Movement : MonoBehaviour
             gunShaft.GetComponent<Renderer>().enabled = false;
         }
         //Pressing the Tab key either opens the inventory screen, or closes it, depending on what its status is
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if(Input.GetKeyDown(KeyCode.I))
         {
             if(inventoryScreen.activeSelf == false)
             {
