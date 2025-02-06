@@ -131,11 +131,11 @@ public class Movement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if(aiming)
+        /*if(aiming)
         {
             //This rotates the player if they hold down the horizontal inputs
             transform.Rotate(0, (horizontalInput * rotationSpeed * Time.deltaTime), 0);
-        }
+        }*/
     }
 
     //A function that takes care of movement
@@ -146,18 +146,19 @@ public class Movement : MonoBehaviour
         //Calculate the movement direction
         moveDirection = (Vector3.forward * verticalInput) + (Vector3.right * horizontalInput);
 
+        if (moveDirection != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 500 * Time.deltaTime);
+        }
+
         //Player can only move if they are not aiming their gun
-        if(!aiming)
+        if (!aiming)
         {
             //Moves the player in the calculated direction at an increased movement speed
             rb.AddForce((moveDirection.normalized * moveSpeed * 10f), ForceMode.Force);
             //transform.rotation = Quaternion.LookRotation(moveDirection.normalized);
-            if(moveDirection != Vector3.zero)
-            {
-                Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
-
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 500 * Time.deltaTime);
-            }
         }
     }
 
