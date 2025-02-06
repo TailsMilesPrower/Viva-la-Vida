@@ -2351,7 +2351,7 @@ MonoBehaviour:
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
   dialouge:
-  - You see Ari's alien cat sitting on the chair
+  - You see Todd sitting on the chair
   - You feel a little better
   playerInRange: 0
   lineNumber: 0
