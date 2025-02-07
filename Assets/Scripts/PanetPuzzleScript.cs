@@ -19,6 +19,8 @@ public class PanetPuzzleScript : MonoBehaviour
 
     public GameObject planetPicker;
 
+    public bool inDialouge;
+
     private void Start()
     {
         dialougeBox = GameObject.Find("DialougeBox");
@@ -42,22 +44,35 @@ public class PanetPuzzleScript : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                dialougeBox.GetComponent<RawImage>().enabled = true;
-                dialougeText.enabled = true;
-
-                if (currentlyEnabledPlanet == null)
+                if(!inDialouge)
                 {
-                    dialougeText.text = "Which planet do you want to place here?";
-                    planetPicker.GetComponent<PlanetPickerScript>().buttonMenuOpen = true;
+                    if (currentlyEnabledPlanet == null)
+                    {
+                        dialougeText.text = "Which planet do you want to place here?";
+                        planetPicker.GetComponent<PlanetPickerScript>().buttonMenuOpen = true;
+                    }
+                    else
+                    {
+                        dialougeText.text = "You picked up " + currentlyEnabledPlanet.name;
+                        if (currentlyEnabledPlanet.name == "Sun")
+                        {
+                            planetPicker.GetComponent<PlanetPickerScript>().hasSun = true;
+                        }
+                        currentlyEnabledPlanet.SetActive(false);
+                        currentlyEnabledPlanet = null;
+                    }
+
+                    Debug.Log("Testing");
+                    dialougeBox.GetComponent<RawImage>().enabled = true;
+                    dialougeText.enabled = true;
+                    inDialouge = true;
                 }
                 else
                 {
-                    dialougeText.text = "You picked up " + currentlyEnabledPlanet.name;
-                    if(currentlyEnabledPlanet.name == "Sun")
-                    {
-                        planetPicker.GetComponent<PlanetPickerScript>().hasSun = true;
-                    }
-                    currentlyEnabledPlanet = null;
+                    dialougeBox.GetComponent<RawImage>().enabled = false;
+                    dialougeText.enabled = false;
+                    inDialouge = false;
+                    planetPicker.GetComponent<PlanetPickerScript>().buttonMenuOpen = false;
                 }
             }
         }
