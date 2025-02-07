@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -11,11 +12,18 @@ public class EnemyScript : MonoBehaviour
     public int enemyNum;
 
     private GameObject gameManager;
+    
+    //This gives NavMeshAI on the enemy
+    private Transform playerTransform;
+    private NavMeshAgent nav;
 
     private void Start()
     {
         player = GameObject.Find("Player");
         gameManager = GameObject.Find("GameManager");
+        
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        nav = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -25,6 +33,8 @@ public class EnemyScript : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, (speed * Time.deltaTime));
         //This makes the enemy look at the player
         transform.LookAt(player.transform.position);
+
+        nav.destination = playerTransform.position;
     }
 
     private void OnCollisionEnter(Collision collision)
