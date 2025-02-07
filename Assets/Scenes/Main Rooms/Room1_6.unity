@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 267098179}
   - component: {fileID: 267098178}
   m_Layer: 0
-  m_Name: Wall (4)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 359545334}
   - component: {fileID: 359545333}
   m_Layer: 0
-  m_Name: Wall (6)
+  m_Name: INV_Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1416,7 +1416,7 @@ GameObject:
   - component: {fileID: 497467902}
   - component: {fileID: 497467901}
   m_Layer: 0
-  m_Name: Wall (7)
+  m_Name: Wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2027,7 +2027,7 @@ GameObject:
   - component: {fileID: 757661297}
   - component: {fileID: 757661296}
   m_Layer: 0
-  m_Name: Wall (9)
+  m_Name: Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3271,7 +3271,7 @@ GameObject:
   - component: {fileID: 962750839}
   - component: {fileID: 962750838}
   m_Layer: 0
-  m_Name: Wall (5)
+  m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3834,7 +3834,7 @@ GameObject:
   - component: {fileID: 1085029779}
   - component: {fileID: 1085029778}
   m_Layer: 0
-  m_Name: Wall (3)
+  m_Name: INV_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4160,7 +4160,7 @@ GameObject:
   - component: {fileID: 1537006449}
   - component: {fileID: 1537006448}
   m_Layer: 0
-  m_Name: Wall (8)
+  m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5028,7 +5028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1818006424}
   m_Layer: 0
-  m_Name: Enviorment
+  m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5050,11 +5050,11 @@ Transform:
   - {fileID: 267098177}
   - {fileID: 1537006447}
   - {fileID: 1806599528}
-  - {fileID: 1085029777}
   - {fileID: 962750837}
-  - {fileID: 359545332}
-  - {fileID: 497467900}
   - {fileID: 757661295}
+  - {fileID: 497467900}
+  - {fileID: 1085029777}
+  - {fileID: 359545332}
   - {fileID: 900438071}
   - {fileID: 466472884}
   m_Father: {fileID: 0}

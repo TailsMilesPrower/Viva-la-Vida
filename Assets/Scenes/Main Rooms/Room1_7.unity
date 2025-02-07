@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 1356465}
   - component: {fileID: 1356464}
   m_Layer: 0
-  m_Name: Wall (2)
+  m_Name: Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 169074734}
   - component: {fileID: 169074733}
   m_Layer: 0
-  m_Name: Wall (5)
+  m_Name: Wall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 343823136}
   - component: {fileID: 343823135}
   m_Layer: 0
-  m_Name: Wall (10)
+  m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -811,7 +811,7 @@ GameObject:
   - component: {fileID: 671805940}
   - component: {fileID: 671805939}
   m_Layer: 0
-  m_Name: Wall (12)
+  m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1511,11 +1511,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 460811770651825861, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_SelectedEdges.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460811770651825861, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_SelectedFaces.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460811770651825861, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_Tangents.Array.data[4].x
@@ -2111,7 +2111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 460811770651825861, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_SelectedVertices.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460811770651825861, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_SelectedEdges.Array.data[0].a
@@ -2369,7 +2369,7 @@ GameObject:
   - component: {fileID: 1142295984}
   - component: {fileID: 1142295983}
   m_Layer: 0
-  m_Name: Wall (6)
+  m_Name: INV_Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2578,7 +2578,7 @@ GameObject:
   - component: {fileID: 1205919284}
   - component: {fileID: 1205919283}
   m_Layer: 0
-  m_Name: Wall (11)
+  m_Name: Wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2766,7 +2766,7 @@ GameObject:
   - component: {fileID: 1482663435}
   - component: {fileID: 1482663434}
   m_Layer: 0
-  m_Name: Wall (3)
+  m_Name: INV_Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2874,7 +2874,7 @@ GameObject:
   - component: {fileID: 1546035340}
   - component: {fileID: 1546035339}
   m_Layer: 0
-  m_Name: Wall (14)
+  m_Name: Wall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2982,7 +2982,7 @@ GameObject:
   - component: {fileID: 1629231207}
   - component: {fileID: 1629231206}
   m_Layer: 0
-  m_Name: Wall (4)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3191,7 +3191,7 @@ GameObject:
   - component: {fileID: 1748370596}
   - component: {fileID: 1748370595}
   m_Layer: 0
-  m_Name: Wall (7)
+  m_Name: Wall (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3304,11 +3304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 460811770651825861, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_SelectedEdges.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460811770651825861, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_SelectedFaces.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460811770651825861, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_Tangents.Array.data[4].x
@@ -3904,7 +3904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 460811770651825861, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_SelectedVertices.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460811770651825861, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_SelectedEdges.Array.data[0].a
@@ -4194,7 +4194,7 @@ GameObject:
   - component: {fileID: 1859623227}
   - component: {fileID: 1859623226}
   m_Layer: 0
-  m_Name: Wall (9)
+  m_Name: Wall (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4371,7 +4371,7 @@ GameObject:
   - component: {fileID: 1916427653}
   - component: {fileID: 1916427652}
   m_Layer: 0
-  m_Name: Wall (13)
+  m_Name: INV_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4479,7 +4479,7 @@ GameObject:
   - component: {fileID: 1956359271}
   - component: {fileID: 1956359270}
   m_Layer: 0
-  m_Name: Wall (8)
+  m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4584,7 +4584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960724261}
   m_Layer: 0
-  m_Name: Enviorment
+  m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4606,16 +4606,16 @@ Transform:
   - {fileID: 1629231205}
   - {fileID: 1956359269}
   - {fileID: 343823134}
-  - {fileID: 1356463}
   - {fileID: 671805938}
-  - {fileID: 1482663433}
-  - {fileID: 1916427651}
-  - {fileID: 169074732}
-  - {fileID: 1142295982}
-  - {fileID: 1748370594}
-  - {fileID: 1859623225}
-  - {fileID: 1546035338}
+  - {fileID: 1356463}
   - {fileID: 1205919282}
+  - {fileID: 1546035338}
+  - {fileID: 169074732}
+  - {fileID: 1859623225}
+  - {fileID: 1748370594}
+  - {fileID: 1916427651}
+  - {fileID: 1482663433}
+  - {fileID: 1142295982}
   - {fileID: 1063983935}
   - {fileID: 1770842045}
   m_Father: {fileID: 0}
