@@ -2578,8 +2578,6 @@ GameObject:
   - component: {fileID: 772823278}
   - component: {fileID: 772823282}
   - component: {fileID: 772823281}
-  - component: {fileID: 772823280}
-  - component: {fileID: 772823279}
   m_Layer: 5
   m_Name: ItemText (2)
   m_TagString: Untagged
@@ -2606,47 +2604,6 @@ RectTransform:
   m_AnchoredPosition: {x: 70.026184, y: 35.258293}
   m_SizeDelta: {x: 99.8541, y: 98.1148}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &772823279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772823277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 772823280}
-          m_TargetAssemblyTypeName: DestroyItem, Assembly-CSharp
-          m_MethodName: DestroyThing
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &772823280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772823277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef3ff097fc00134c8a7e2cefba14835, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &772823281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2803,23 +2760,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Backwards and forwards: W and S
+  m_text: 'Move: WASD
 
 
-    Rotate player: A and D
+    Aim gun: RMB
 
 
-    Aim
-    gun: RMB
+    Shoot gun while aiming: LMB
 
 
-    Shoot gun: LMB
+    Interact:
+    E
 
 
-    Open door: F
-
-
-    Open inventory: Tab'
+    Open inventory: I'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3539,11 +3493,6 @@ PrefabInstance:
 --- !u!1 &1003096501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6010848117408199773, guid: d9c2d29f2b1a74346bb949f4ab29efc7, type: 3}
-  m_PrefabInstance: {fileID: 1003096500}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1003096502 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 699136414938265914, guid: d9c2d29f2b1a74346bb949f4ab29efc7, type: 3}
   m_PrefabInstance: {fileID: 1003096500}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1004128125
@@ -4840,8 +4789,6 @@ GameObject:
   - component: {fileID: 1302459388}
   - component: {fileID: 1302459392}
   - component: {fileID: 1302459391}
-  - component: {fileID: 1302459390}
-  - component: {fileID: 1302459389}
   m_Layer: 5
   m_Name: ItemText (1)
   m_TagString: Untagged
@@ -4868,48 +4815,6 @@ RectTransform:
   m_AnchoredPosition: {x: 143.37439, y: 108.96011}
   m_SizeDelta: {x: 99.8541, y: 98.1148}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1302459389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302459387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1302459390}
-          m_TargetAssemblyTypeName: RestartGun, Assembly-CSharp
-          m_MethodName: ResetGun
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &1302459390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302459387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e83c72e7393db43b61c8a27f4c7c3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gun: {fileID: 1003096502}
 --- !u!114 &1302459391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7921,7 +7826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2127465346
 Transform:
   m_ObjectHideFlags: 0
