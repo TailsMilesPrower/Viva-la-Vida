@@ -2245,9 +2245,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 2
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 39.389256, y: 3.052173, z: 31.212814}
+  m_Center: {x: -14.958155, y: -0.5260867, z: 6.5936203}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2261,7 +2261,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 45e06af76ec17994f825ee35b375a9bf, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 367b2e07a62e7b84385d35adc59fa44a, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1064490648
 GameObject:
