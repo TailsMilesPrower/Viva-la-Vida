@@ -12,7 +12,7 @@ public class PanetPuzzleScript : MonoBehaviour
 
     public GameObject[] planets;
 
-    private bool playerInRange;
+    public bool playerInRange;
 
     public GameObject dialougeBox;
     public TMP_Text dialougeText;
@@ -20,6 +20,8 @@ public class PanetPuzzleScript : MonoBehaviour
     public GameObject planetPicker;
 
     public bool inDialouge;
+
+    public bool puzzleOver = false;
 
     private void Start()
     {
@@ -107,23 +109,41 @@ public class PanetPuzzleScript : MonoBehaviour
                     planetPicker.GetComponent<PlanetPickerScript>().buttonMenuOpen = false;
                 }
             }
+            if(GetComponent<Outline>() == enabled)
+            {
+                GetComponent<Outline>().enabled = true;
+            }
+        }
+        else
+        {
+            if(GetComponent<Outline>() == enabled)
+            {
+                GetComponent<Outline>().enabled = false;
+            }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(!puzzleOver)
         {
-            playerInRange = true;
-            planetPicker.GetComponent<PlanetPickerScript>().currentStand = this.gameObject;
-            GetComponent<Outline>().enabled = true;
+            if (other.CompareTag("Player"))
+            {
+                playerInRange = true;
+                planetPicker.GetComponent<PlanetPickerScript>().currentStand = this.gameObject;
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        playerInRange = false;
-        planetPicker.GetComponent<PlanetPickerScript>().currentStand = null;
-        GetComponent<Outline>().enabled = false;
+        if(!puzzleOver)
+        {
+            if (other.CompareTag("Player"))
+            {
+                playerInRange = false;
+                planetPicker.GetComponent<PlanetPickerScript>().currentStand = null;
+            }
+        }
     }
 }
