@@ -39,6 +39,8 @@ public class PlanetPickerScript : MonoBehaviour
     private GameObject dialougeBox;
     private TMP_Text dialougeText;
 
+    public Movement player;
+
     private void Start()
     {
         noneButton = GameObject.Find("NoneButton").GetComponent<UnityEngine.UI.Image>();
@@ -70,6 +72,8 @@ public class PlanetPickerScript : MonoBehaviour
 
         dialougeBox = GameObject.Find("DialougeBox");
         dialougeText = GameObject.Find("DialougeText").GetComponent<TMP_Text>();
+
+        player = GameObject.Find("Player").GetComponent<Movement>();
     }
 
     private void Update()
@@ -180,6 +184,7 @@ public class PlanetPickerScript : MonoBehaviour
         buttonMenuOpen = false;
         dialougeBox.GetComponent<RawImage>().enabled = false;
         dialougeText.enabled = false;
+        player.enabled = true;
     }
 
     public void PlaceSun()
@@ -191,6 +196,7 @@ public class PlanetPickerScript : MonoBehaviour
         hasSun = false;
         dialougeBox.GetComponent<RawImage>().enabled = false;
         dialougeText.enabled = false;
+        player.enabled = true;
     }
 
     public void PlaceMercury()
@@ -202,6 +208,7 @@ public class PlanetPickerScript : MonoBehaviour
         hasMercury = false;
         dialougeBox.GetComponent<RawImage>().enabled = false;
         dialougeText.enabled = false;
+        player.enabled = true;
     }
 
     public void PlaceVenus()
@@ -213,6 +220,7 @@ public class PlanetPickerScript : MonoBehaviour
         hasVenus = false;
         dialougeBox.GetComponent<RawImage>().enabled = false;
         dialougeText.enabled = false;
+        player.enabled = true;
     }
 
     public void PlaceEarth()
@@ -224,6 +232,7 @@ public class PlanetPickerScript : MonoBehaviour
         hasEarth = false;
         dialougeBox.GetComponent<RawImage>().enabled = false;
         dialougeText.enabled = false;
+        player.enabled = true;
     }
 
     public void PlaceMars()
@@ -235,6 +244,7 @@ public class PlanetPickerScript : MonoBehaviour
         hasMars = false;
         dialougeBox.GetComponent<RawImage>().enabled = false;
         dialougeText.enabled = false;
+        player.enabled = true;
     }
 
     public void PlaceJupiter()
@@ -246,6 +256,7 @@ public class PlanetPickerScript : MonoBehaviour
         hasJupiter = false;
         dialougeBox.GetComponent<RawImage>().enabled = false;
         dialougeText.enabled = false;
+        player.enabled = true;
     }
 
     public void PlaceSaturn()
@@ -257,6 +268,7 @@ public class PlanetPickerScript : MonoBehaviour
         hasSaturn = false;
         dialougeBox.GetComponent<RawImage>().enabled = false;
         dialougeText.enabled = false;
+        player.enabled = true;
     }
 
     public void PlaceUranus()
@@ -268,5 +280,6 @@ public class PlanetPickerScript : MonoBehaviour
         hasUranus = false;
         dialougeBox.GetComponent<RawImage>().enabled = false;
         dialougeText.enabled = false;
+        player.enabled = true;
     }
 }
