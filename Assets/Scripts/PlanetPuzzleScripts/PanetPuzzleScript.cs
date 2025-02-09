@@ -23,11 +23,14 @@ public class PanetPuzzleScript : MonoBehaviour
 
     public bool puzzleOver = false;
 
+    public Movement player;
+
     private void Start()
     {
         dialougeBox = GameObject.Find("DialougeBox");
         dialougeText = GameObject.Find("DialougeText").GetComponent<TMP_Text>();
         planetPicker = GameObject.Find("PlanetPicker");
+        player = GameObject.Find("Player").GetComponent<Movement>();
     }
 
     // Update is called once per frame
@@ -48,6 +51,7 @@ public class PanetPuzzleScript : MonoBehaviour
             {
                 if(!inDialouge)
                 {
+                    player.enabled = false;
                     if (currentlyEnabledPlanet == null)
                     {
                         dialougeText.text = "Which planet do you want to place here?";
@@ -103,6 +107,7 @@ public class PanetPuzzleScript : MonoBehaviour
                 }
                 else
                 {
+                    player.enabled = true;
                     dialougeBox.GetComponent<RawImage>().enabled = false;
                     dialougeText.enabled = false;
                     inDialouge = false;
