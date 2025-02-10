@@ -35,6 +35,29 @@ public class Movement : MonoBehaviour
 
     public MovementState state;
 
+    //This defines the health changed events and handler delagating
+    public delegate void HealthChangedHandler(object source, float oldHealth, float newHealth);
+    public event HealthChangedHandler OnHealthChanged;
+
+    [SerializeField]
+    float currentHealth;
+    float maxHealth;
+
+    public float CurrentHealth => currentHealth;
+
+    [SerializeField]
+    float testHealAmount = 5f;
+    [SerializeField]
+    float testDamageAmount = -5f;
+
+    public void ChangeHealth(float amount)
+    {
+        float oldHealth = currentHealth;
+        currentHealth += amount;
+        currentHealth = Mathf.Clamp(currentHealth,0,maxHealth);
+        OnHealthChanged?.Invoke(this, oldHealth, currentHealth);
+    }
+
     public enum MovementState
     {
         walking,
@@ -43,6 +66,11 @@ public class Movement : MonoBehaviour
 
     //A refrence to the game manager
     public GameObject gameManager;
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+    }
 
     private void Awake()
     {
