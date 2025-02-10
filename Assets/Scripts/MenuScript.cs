@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-    public void LoadMenu()
+    public void LoadFreeroam()
     {
         SceneManager.LoadScene("Room1_1");
     }
@@ -16,5 +16,10 @@ public class MenuScript : MonoBehaviour
     public void LoadCombination()
     {
         SceneManager.LoadScene("CombinationPuzzle");
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("TutorialScene");
     }
 }
