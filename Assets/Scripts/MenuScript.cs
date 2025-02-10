@@ -7,4 +7,14 @@ public class MenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("Room1_1");
     }
+
+    public void LoadPlanet()
+    {
+        SceneManager.LoadScene("SolarSystemTest");
+    }
+
+    public void LoadCombination()
+    {
+        SceneManager.LoadScene("CombinationPuzzle");
+    }
 }
