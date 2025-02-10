@@ -21,9 +21,6 @@ public class GunScript : MonoBehaviour
     //Refrence to the point that the bullet fires towards
     public Transform shootPoint;
 
-    //Refrence to the UI text that tells you if you can shoot or not
-    public TMP_Text canShootText;
-
     private void Awake()
     {
         //Make sure that the player is able to shoot
@@ -34,16 +31,6 @@ public class GunScript : MonoBehaviour
     {
         //Calling the input method
         MyInput();
-
-        //If the player is able to shoot, the text displays it so. If not, the text reflects that
-        if(readyToShoot == true)
-        {
-            canShootText.text = "Can shoot: Yes";
-        }
-        else
-        {
-            canShootText.text = "Can shoot: No";
-        }
     }
 
     //A method for shooting. If the player has ammo, presses the LMB, and they are currently aiming, the Shoot method is called
@@ -60,9 +47,6 @@ public class GunScript : MonoBehaviour
     //A method that handles shooting
     private void Shoot()
     {
-        //Makes it so that the player cannot shoot again until they're done reloading
-        //readyToShoot = false;
-
         //Calculate direction the bullet flies towards
         Vector3 direction = shootPoint.position - bulletSpawn.position;
 
