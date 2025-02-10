@@ -3,37 +3,7 @@ using static UnityEngine.Analytics.IAnalytic;
 
 public class AimTracer : MonoBehaviour
 {
-    //[SerializeField]
-    //LineRenderer lineRenderer;
-
-    //Vector3 aimPosition;
-    //[SerializeField]
-    //GameObject player;
-
-    //bool aiming = false;
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if (Input.GetMouseButton(1)) aiming = true;
-    //    if (Input.GetMouseButtonUp(1)) aiming = false;
-    //    Ray ray = new Ray(player.transform.position, player.transform.forward);
-
-    //    if (Physics.Raycast(ray, out RaycastHit hitdata)) {
-    //        aimPosition = hitdata.collider;
-    //    }
-
-    //    if (aiming) {
-    //        lineRenderer.SetPosition(0, player.transform.position);
-    //        if (hitdata.point == null) {
-    //            lineRenderer.SetPosition(1, player.transform.forward);
-    //        }
-    //        else {
-    //            lineRenderer.SetPosition(1, aimPosition);
-    //        }
-    //    } else if (!aiming) {
-    //        lineRenderer = null;
-    //    }
-    //}
+    [Header("References)")]
     [SerializeField]
     private LineRenderer lineRenderer;
 
