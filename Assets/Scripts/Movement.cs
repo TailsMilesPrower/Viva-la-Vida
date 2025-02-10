@@ -43,6 +43,8 @@ public class Movement : MonoBehaviour
     [SerializeField]
     float currentHealth;
     float maxHealth;
+    float damage;
+    float healing;
 
     public float CurrentHealth => currentHealth;
 
@@ -55,8 +57,24 @@ public class Movement : MonoBehaviour
     {
         float oldHealth = currentHealth;
         currentHealth += amount;
-        currentHealth = Mathf.Clamp(currentHealth,0,maxHealth);
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         OnHealthChanged?.Invoke(this, oldHealth, currentHealth);
+    }
+
+    void ApplyHealing()
+    {
+        if (currentHealth < maxHealth)
+        {
+            currentHealth = currentHealth + healing;
+        }
+    }
+
+    public void DamageHealth()
+    {
+        if (currentHealth > 0)
+        {
+            currentHealth = currentHealth - damage;
+        }
     }
 
     public enum MovementState
@@ -136,6 +154,12 @@ public class Movement : MonoBehaviour
                 inventoryScreen.SetActive(false);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            DamageHealth();
+        }
+
     }
 
     private void FixedUpdate()
