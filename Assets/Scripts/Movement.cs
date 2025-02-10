@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -93,6 +94,13 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name == "TutorialScene")
+        {
+            Destroy(this.gameObject);
+        }
+
         //Calling the input function
         MyInput();
         //Calling the state function

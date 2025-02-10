@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroyOnLoad : MonoBehaviour
 {
@@ -8,5 +9,15 @@ public class DontDestroyOnLoad : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Update()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name == "TutorialScene")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

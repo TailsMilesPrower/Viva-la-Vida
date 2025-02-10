@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraScript : MonoBehaviour
 {
@@ -31,7 +32,14 @@ public class CameraScript : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.S))
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name == "TutorialScene")
+        {
+            Destroy(this.gameObject);
+        }
+
+        if (Input.GetKey(KeyCode.S))
         {
             if(offset.z > cameraZOffsetMax)
             {
