@@ -42,9 +42,9 @@ public class Movement : MonoBehaviour
 
     [SerializeField]
     float currentHealth;
-    float maxHealth;
-    float damage;
-    float healing;
+    float maxHealth = 20f;
+    float damage = 10f;
+    float healing = 10f;
 
     public float CurrentHealth => currentHealth;
 
@@ -59,13 +59,20 @@ public class Movement : MonoBehaviour
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         OnHealthChanged?.Invoke(this, oldHealth, currentHealth);
+
+        // Checks if health has reached zero
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene("Death scene");
+        }
+
     }
 
     void ApplyHealing()
     {
         if (currentHealth < maxHealth)
         {
-            currentHealth = currentHealth + healing;
+            currentHealth = Mathf.Min(currentHealth + healing, maxHealth);
         }
     }
 
@@ -73,7 +80,13 @@ public class Movement : MonoBehaviour
     {
         if (currentHealth > 0)
         {
-            currentHealth = currentHealth - damage;
+            currentHealth -= damage;
+
+            // Checks if health is zero and changes scene
+            if (currentHealth <= 0)
+            {
+                SceneManager.LoadScene("Death scene");
+            }
         }
     }
 
