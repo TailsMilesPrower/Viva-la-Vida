@@ -11,15 +11,19 @@ public class CombinationLockScript : MonoBehaviour
 
     private Movement player;
 
+    private CameraScript camera;
+
     public GameObject box;
 
     public string correctCombination;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerInput = GameObject.Find("PlayerInput").GetComponent<TMP_InputField>();
         player = GameObject.Find("Player").GetComponent<Movement>();
+        camera = Camera.main.GetComponent<CameraScript>();
         playerInput.gameObject.SetActive(false);
     }
 
@@ -34,12 +38,14 @@ public class CombinationLockScript : MonoBehaviour
                 {
                     inDialouge = false;
                     player.enabled = true;
+                    camera.enabled = true;
                     playerInput.gameObject.SetActive(false);
                 }
                 else
                 {
                     inDialouge = true;
                     player.enabled = false;
+                    camera.enabled = false;
                     playerInput.gameObject.SetActive(true);
                 }
             }
