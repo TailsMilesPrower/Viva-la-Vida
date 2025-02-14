@@ -1646,7 +1646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 794260167}
   m_Layer: 0
-  m_Name: EntryPoint1_1
+  m_Name: EntryPoint1_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1677,7 +1677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827193044}
   m_Layer: 0
-  m_Name: CameraPoint1_1
+  m_Name: CameraPoint1_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4160,13 +4160,13 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 739004377}
-  - {fileID: 794260167}
   - {fileID: 1242228486}
   - {fileID: 1106436148}
   - {fileID: 1062349390}
   - {fileID: 884118116}
-  - {fileID: 827193044}
   - {fileID: 1438255120}
   - {fileID: 1706546294}
   - {fileID: 697988062}
   - {fileID: 1602437147}
+  - {fileID: 794260167}
+  - {fileID: 827193044}
