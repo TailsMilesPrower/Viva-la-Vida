@@ -48,11 +48,6 @@ public class Movement : MonoBehaviour
 
     public float CurrentHealth => currentHealth;
 
-    [SerializeField]
-    float testHealAmount = 5f;
-    [SerializeField]
-    float testDamageAmount = -5f;
-
     public void ChangeHealth(float amount)
     {
         float oldHealth = currentHealth;
@@ -68,6 +63,7 @@ public class Movement : MonoBehaviour
 
     }
 
+    // This one will be used with items/consumables
     void ApplyHealing()
     {
         if (currentHealth < maxHealth)
@@ -209,10 +205,10 @@ public class Movement : MonoBehaviour
             //This rotates the player if they hold down the horizontal inputs
             transform.Rotate(0, (horizontalInput * rotationSpeed * Time.deltaTime), 0);
         }*/
-    }
+}
 
-    //A function that takes care of movement
-    private void MovePlayer()
+//A function that takes care of movement
+private void MovePlayer()
     {
         //moveDirection = (cam.transform.forward * verticalInput) + (cam.transform.right * horizontalInput);
 
