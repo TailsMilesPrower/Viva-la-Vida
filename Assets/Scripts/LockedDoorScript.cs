@@ -23,11 +23,10 @@ public class LockedDoorScript : MonoBehaviour
     public bool tunnelDoor;
 
     public bool coinDoor;
-    public bool basementKey;
+    public bool basementDoor;
     public bool kingsDoor;
 
     private bool inDialouge;
-    public bool puzzleSolved;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,11 +38,37 @@ public class LockedDoorScript : MonoBehaviour
         doorScript = this.GetComponent<DoorScript>();
         dialougeBox = GameObject.Find("DialougeBox");
         dialougeText = GameObject.Find("DialougeText").GetComponent<TMP_Text>();
-        if(gameManager.hallwayUnlocked)
+        if(hallwayDoor)
         {
-            puzzleSolved = true;
-            doorScript.enabled = true;
-            this.enabled = false;
+            if (gameManager.hallwayUnlocked)
+            {
+                doorScript.enabled = true;
+                this.enabled = false;
+            }
+        }
+        else if (tunnelDoor)
+        {
+            if(gameManager.tunnelUnlocked)
+            {
+                doorScript.enabled = true;
+                this.enabled = false;
+            }
+        }
+        else if(servantsDoor)
+        {
+            if(gameManager.servantsUnlocked)
+            {
+                doorScript.enabled = true;
+                this.enabled = false;
+            }
+        }
+        else if(basementDoor)
+        {
+            if(gameManager.basementUnlocked)
+            {
+                doorScript.enabled = true;
+                this.enabled = false;
+            }
         }
     }
 
@@ -63,16 +88,8 @@ public class LockedDoorScript : MonoBehaviour
                     {
                         if(inDialouge)
                         {
-                            player.enabled = true;
-                            dialougeBox.GetComponent<RawImage>().enabled = false;
-                            dialougeText.enabled = false;
-                            inDialouge = false;
-                            doorScript.enabled = true;
-                            doorScript.playerInDoor = true;
-                            GetComponent<Outline>().enabled = false;
-                            puzzleSolved = true;
                             gameManager.hallwayUnlocked = true;
-                            this.enabled = false;
+                            UnlockDoor();
                         }
                         else
                         {
@@ -84,15 +101,96 @@ public class LockedDoorScript : MonoBehaviour
                     {
                         if(inDialouge)
                         {
-                            player.enabled = true;
-                            dialougeBox.GetComponent<RawImage>().enabled = false;
-                            dialougeText.enabled = false;
-                            inDialouge = false;
+                            CloseDialouge();
                         }
                         else
                         {
                             inDialouge = true;
                             dialougeText.text = "The door is locked. An orange citrine gemstone is engraved into the door.";
+                        }
+                    }
+                }
+                else if(tunnelDoor)
+                {
+                    if (gameManager.tunnelKey)
+                    {
+                        if (inDialouge)
+                        {
+                            gameManager.tunnelUnlocked = true;
+                            UnlockDoor();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "You unlocked the secret tunnel.";
+                        }
+                    }
+                    else
+                    {
+                        if (inDialouge)
+                        {
+                            CloseDialouge();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "A small door is hidden behind the small cupboard. It is locked with a horse-shaped lock.";
+                        }
+                    }
+                }
+                else if(servantsDoor)
+                {
+                    if (gameManager.servantsKey)
+                    {
+                        if (inDialouge)
+                        {
+                            gameManager.servantsUnlocked = true;
+                            UnlockDoor();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "You unlocked the servant's quarters.";
+                        }
+                    }
+                    else
+                    {
+                        if (inDialouge)
+                        {
+                            CloseDialouge();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "The door is locked. The wood is worn out, and it is decorated with a large S emblem.";
+                        }
+                    }
+                }
+                else if(basementDoor)
+                {
+                    if (gameManager.basementKey)
+                    {
+                        if (inDialouge)
+                        {
+                            gameManager.basementUnlocked = true;
+                            UnlockDoor();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "You unlocked the basement.";
+                        }
+                    }
+                    else
+                    {
+                        if (inDialouge)
+                        {
+                            CloseDialouge();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "The basement door is locked with large, old lock. Whatever key unlocks this must be old and rusty.";
                         }
                     }
                 }
@@ -105,10 +203,6 @@ public class LockedDoorScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if(!puzzleSolved)
-            {
-                GetComponent<Outline>().enabled = true;
-            }
             playerInRange = true;
         }
     }
@@ -118,11 +212,26 @@ public class LockedDoorScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!puzzleSolved)
-            {
-                GetComponent<Outline>().enabled = false;
-            }
             playerInRange = false;
         }
+    }
+
+    void UnlockDoor()
+    {
+        player.enabled = true;
+        dialougeBox.GetComponent<RawImage>().enabled = false;
+        dialougeText.enabled = false;
+        inDialouge = false;
+        doorScript.enabled = true;
+        doorScript.playerInDoor = true;
+        this.enabled = false;
+    }
+
+    void CloseDialouge()
+    {
+        player.enabled = true;
+        dialougeBox.GetComponent<RawImage>().enabled = false;
+        dialougeText.enabled = false;
+        inDialouge = false;
     }
 }

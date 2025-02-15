@@ -45,6 +45,9 @@ public class GameManager : MonoBehaviour
     public bool kingsKeyTwo;
 
     public bool hallwayUnlocked;
+    public bool tunnelUnlocked;
+    public bool servantsUnlocked;
+    public bool basementUnlocked;
 
     private void Awake()
     {

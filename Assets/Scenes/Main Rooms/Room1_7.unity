@@ -3331,7 +3331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3093974979188267041, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       propertyPath: sceneName
-      value: Room1_8
+      value: RoomB
       objectReference: {fileID: 0}
     - target: {fileID: 3093974979188267041, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       propertyPath: doorNumber
@@ -3403,17 +3403,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1704793960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca762171fbce39d42bb655084dc20f40, type: 3}
+  m_Script: {fileID: 11500000, guid: cb79503a58db7524e8e7e56604a5295d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  roomCheck: {fileID: 0}
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
-  dialouge:
-  - You hear the sound of frustrated programmers behind the door
-  - We're still working on this room :D
   playerInRange: 0
-  lineNumber: 0
-  outlineEneabled: 0
+  hallwayDoor: 0
+  servantsDoor: 0
+  planeteriumDoor: 0
+  secondFloorDoor: 0
+  meetingDoor: 0
+  libraryDoor: 0
+  tunnelDoor: 0
+  coinDoor: 0
+  basementDoor: 1
+  kingsDoor: 0
 --- !u!1 &1748370593
 GameObject:
   m_ObjectHideFlags: 0

@@ -44,9 +44,12 @@ public class PickupObject : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Movement>();
         dialougeBox = GameObject.Find("DialougeBox");
         dialougeText = GameObject.Find("DialougeText").GetComponent<TMP_Text>();
-        if(gameManager.hallwayKey)
+        if(hallwayKey)
         {
-            Destroy(gameObject);
+            if (gameManager.hallwayKey)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -64,17 +67,56 @@ public class PickupObject : MonoBehaviour
                 {
                     if(inDialouge)
                     {
-                        player.enabled = true;
-                        dialougeBox.GetComponent<RawImage>().enabled = false;
-                        dialougeText.enabled = false;
-                        inDialouge = false;
                         gameManager.hallwayKey = true;
+                        CLoseDialouge();
                         Destroy(gameObject);
                     }
                     else
                     {
                         inDialouge = true;
                         dialougeText.text = "You picked up a key with an orange citrine gemstone as its head.";
+                    }
+                }
+                else if (tunnelKey)
+                {
+                    if (inDialouge)
+                    {
+                        gameManager.tunnelKey = true;
+                        CLoseDialouge();
+                        Destroy(gameObject);
+                    }
+                    else
+                    {
+                        inDialouge = true;
+                        dialougeText.text = "You picked up a key with a horse emblem as its head.";
+                    }
+                }
+                else if(servantsKey)
+                {
+                    if (inDialouge)
+                    {
+                        gameManager.servantsKey = true;
+                        CLoseDialouge();
+                        Destroy(gameObject);
+                    }
+                    else
+                    {
+                        inDialouge = true;
+                        dialougeText.text = "You picked up a key with a large S-shaped emblem as its head.";
+                    }
+                }
+                else if(basementKey)
+                {
+                    if (inDialouge)
+                    {
+                        gameManager.basementKey = true;
+                        CLoseDialouge();
+                        Destroy(gameObject);
+                    }
+                    else
+                    {
+                        inDialouge = true;
+                        dialougeText.text = "You picked up an old and rusty key. Whatever this unlocks, it must be a very old lock.";
                     }
                 }
             }
@@ -99,5 +141,13 @@ public class PickupObject : MonoBehaviour
             GetComponent<Outline>().enabled = false;
             playerInRange = false;
         }
+    }
+
+    void CLoseDialouge()
+    {
+        player.enabled = true;
+        dialougeBox.GetComponent<RawImage>().enabled = false;
+        dialougeText.enabled = false;
+        inDialouge = false;
     }
 }

@@ -3757,6 +3757,10 @@ PrefabInstance:
       value: Door 1_10
       objectReference: {fileID: 0}
     - target: {fileID: 3093974979188267041, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093974979188267041, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       propertyPath: sceneName
       value: Room1_10
       objectReference: {fileID: 0}
@@ -3831,6 +3835,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2516836833126812236, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1934502473}
+    - targetCorrespondingSourceObject: {fileID: 2516836833126812236, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1934502474}
   m_SourcePrefab: {fileID: 100100000, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
 --- !u!1 &1934502472 stripped
 GameObject:
@@ -3855,6 +3862,34 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1934502474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934502472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb79503a58db7524e8e7e56604a5295d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  roomCheck: {fileID: 0}
+  dialougeBox: {fileID: 0}
+  dialougeText: {fileID: 0}
+  playerInRange: 0
+  hallwayDoor: 0
+  servantsDoor: 0
+  planeteriumDoor: 0
+  secondFloorDoor: 0
+  meetingDoor: 0
+  libraryDoor: 0
+  tunnelDoor: 1
+  coinDoor: 0
+  basementKey: 0
+  kingsDoor: 0
+  puzzleSolved: 0
 --- !u!1 &1941534961
 GameObject:
   m_ObjectHideFlags: 0
