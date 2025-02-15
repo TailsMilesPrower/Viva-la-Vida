@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Rooms/Room1_13.unity
     guid: 9d7b213037ad3e74c9c5f05ca2079582
   - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room1_14.unity
+    guid: 51fceb3f10e5d704ea15a257580098b2
+  - enabled: 1
     path: Assets/Scenes/PuzzleTest/SolarSystemTest.unity
     guid: a24a918a36ccfca45a4540abe9a8f002
   - enabled: 1
