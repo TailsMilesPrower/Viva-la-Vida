@@ -298,10 +298,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2516836833126812236, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1350890863}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
 --- !u!1 &115492291
 GameObject:
@@ -3057,30 +3054,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783766767}
   m_CullTransparentMesh: 1
---- !u!1 &857607713 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2516836833126812236, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
-  m_PrefabInstance: {fileID: 880906806}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &857607717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857607713}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca762171fbce39d42bb655084dc20f40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialougeBox: {fileID: 0}
-  dialougeText: {fileID: 0}
-  dialouge:
-  - Still in development, come back later
-  playerInRange: 0
-  lineNumber: 0
-  outlineEneabled: 0
 --- !u!1 &858603333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,10 +3294,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2516836833126812236, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 857607717}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
 --- !u!4 &903863526 stripped
 Transform:
@@ -5268,30 +5238,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309175823}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1350890859 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2516836833126812236, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
-  m_PrefabInstance: {fileID: 74997181}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1350890863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350890859}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca762171fbce39d42bb655084dc20f40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialougeBox: {fileID: 0}
-  dialougeText: {fileID: 0}
-  dialouge:
-  - Under construction
-  playerInRange: 0
-  lineNumber: 0
-  outlineEneabled: 0
 --- !u!1 &1377787773
 GameObject:
   m_ObjectHideFlags: 0
