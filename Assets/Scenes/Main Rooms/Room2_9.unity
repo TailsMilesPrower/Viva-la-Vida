@@ -1138,7 +1138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
-  dialouge: []
+  dialouge:
+  - text holder 3!
   playerInRange: 0
   lineNumber: 0
   outlineEneabled: 0
@@ -1284,7 +1285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
-  dialouge: []
+  dialouge:
+  - text holder 1!
   playerInRange: 0
   lineNumber: 0
   outlineEneabled: 0
@@ -2782,7 +2784,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
-  dialouge: []
+  dialouge:
+  - text holder 4!
   playerInRange: 0
   lineNumber: 0
   outlineEneabled: 0
@@ -3054,7 +3057,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
-  dialouge: []
+  dialouge:
+  - A massive painting depicting a rich king.
   playerInRange: 0
   lineNumber: 0
   outlineEneabled: 0
@@ -3303,7 +3307,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
-  dialouge: []
+  dialouge:
+  - text  holder 2!
   playerInRange: 0
   lineNumber: 0
   outlineEneabled: 0
@@ -3449,7 +3454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
-  dialouge: []
+  dialouge:
+  - His most victorious battles...all forgotten.
   playerInRange: 0
   lineNumber: 0
   outlineEneabled: 0
