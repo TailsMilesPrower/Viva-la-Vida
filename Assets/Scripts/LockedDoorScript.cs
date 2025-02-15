@@ -39,6 +39,12 @@ public class LockedDoorScript : MonoBehaviour
         doorScript = this.GetComponent<DoorScript>();
         dialougeBox = GameObject.Find("DialougeBox");
         dialougeText = GameObject.Find("DialougeText").GetComponent<TMP_Text>();
+        if(gameManager.hallwayUnlocked)
+        {
+            puzzleSolved = true;
+            doorScript.enabled = true;
+            this.enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -65,6 +71,7 @@ public class LockedDoorScript : MonoBehaviour
                             doorScript.playerInDoor = true;
                             GetComponent<Outline>().enabled = false;
                             puzzleSolved = true;
+                            gameManager.hallwayUnlocked = true;
                             this.enabled = false;
                         }
                         else
