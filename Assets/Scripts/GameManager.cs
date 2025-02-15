@@ -23,6 +23,29 @@ public class GameManager : MonoBehaviour
     public bool enemyTwoDead = false;
     public bool enemyThreeDead = false;
 
+    public bool coinOne;
+    public bool coinTwo;
+    public bool coinThree;
+
+    public bool sword;
+    public bool clothPile;
+    public bool book;
+
+    public bool toiletClogged;
+
+    public bool hallwayKey;
+    public bool planetariumKey;
+    public bool meetingKey;
+    public bool secondFloorKey;
+    public bool servantsKey;
+    public bool tunnelKey;
+
+    public bool basementKey;
+    public bool kingsKeyOne;
+    public bool kingsKeyTwo;
+
+    public bool hallwayUnlocked;
+
     private void Awake()
     {
         //This code is used to make sure there are never more than one game manager

@@ -54,6 +54,23 @@ MonoBehaviour:
   enemyOneDead: 0
   enemyTwoDead: 0
   enemyThreeDead: 0
+  coinOne: 0
+  coinTwo: 0
+  coinThree: 0
+  sword: 0
+  clothPile: 0
+  book: 0
+  toiletClogged: 0
+  hallwayKey: 0
+  planetariumKey: 0
+  meetingKey: 0
+  secondFloorKey: 0
+  servantsKey: 0
+  tunnelKey: 0
+  basementKey: 0
+  kingsKeyOne: 0
+  kingsKeyTwo: 0
+  hallwayUnlocked: 0
 --- !u!114 &1197596856980045196
 MonoBehaviour:
   m_ObjectHideFlags: 0

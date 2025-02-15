@@ -14,7 +14,7 @@ public class DoorScript : MonoBehaviour
     public GameManager gameManager;
 
     //A bool to help check if the player is by the door
-    private bool playerInDoor = false;
+    public bool playerInDoor = false;
 
     public GameObject roomCheck;
 
