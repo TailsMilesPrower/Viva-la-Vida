@@ -3615,6 +3615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ground_ProBuilder
       objectReference: {fileID: 0}
+    - target: {fileID: 607137801403061119, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6299891032647223214, guid: 05885de5129592046bf1c8d193fdfc51, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3887,9 +3891,8 @@ MonoBehaviour:
   libraryDoor: 0
   tunnelDoor: 1
   coinDoor: 0
-  basementKey: 0
+  basementDoor: 0
   kingsDoor: 0
-  puzzleSolved: 0
 --- !u!1 &1941534961
 GameObject:
   m_ObjectHideFlags: 0
