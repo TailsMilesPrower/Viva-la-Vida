@@ -7,6 +7,10 @@ public class DynamicCameraClamp : MonoBehaviour
 
     private GameObject playerCamera;
 
+    public bool changesHeight;
+
+    public float yOffsetChange;
+
     private void Start()
     {
         playerCamera = GameObject.Find("Main Camera");
@@ -18,6 +22,10 @@ public class DynamicCameraClamp : MonoBehaviour
         {
             playerCamera.GetComponent<CameraScript>().minCamPosition = cameraClampMin;
             playerCamera.GetComponent<CameraScript>().maxCamPosition = cameraClampMax;
+            if(changesHeight)
+            {
+                playerCamera.GetComponent<CameraScript>().offset.y = yOffsetChange;
+            }
         }
     }
 }

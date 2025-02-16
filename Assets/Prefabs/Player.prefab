@@ -130,7 +130,6 @@ MonoBehaviour:
   readyToShoot: 0
   bulletSpawn: {fileID: 5849028589938681466}
   shootPoint: {fileID: 911774460034147346}
-  canShootText: {fileID: 0}
 --- !u!1 &3952499821619113265
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,12 +659,17 @@ MonoBehaviour:
   sprintSpeed: 7
   rotationSpeed: 100
   maxSpeed: 4
+  playerHeight: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
   groundDrag: 5
   gun: {fileID: 699136414938265914}
   gunShaft: {fileID: 5017631479824288395}
   inventoryScreen: {fileID: 0}
   aiming: 0
   state: 0
+  currentHealth: 0
   gameManager: {fileID: 0}
 --- !u!114 &2324821955454943879
 MonoBehaviour:

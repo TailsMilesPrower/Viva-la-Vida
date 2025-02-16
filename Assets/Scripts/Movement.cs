@@ -22,6 +22,10 @@ public class Movement : MonoBehaviour
     public float rotationSpeed;
     //The maximum speed that the player can reach
     public float maxSpeed;
+
+    public float playerHeight;
+    public LayerMask whatIsGround;
+    bool grounded;
     //A value which will be used to apply drag to the player, to stop them from sliding across the floor
     public float groundDrag;
 
@@ -128,6 +132,8 @@ public class Movement : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+
         //Calling the input function
         MyInput();
         //Calling the state function
@@ -135,7 +141,14 @@ public class Movement : MonoBehaviour
         //Calling the function that limits the player's movement speed, so the player doesn't accelerate infinetly
         SpeedControl();
 
-        rb.linearDamping = groundDrag;
+        if(grounded)
+        {
+            rb.linearDamping = groundDrag;
+        }
+        else
+        {
+            rb.linearDamping = 0;
+        }
 
         //When the player holds down the RMB, the gun appears and the player starts aiming
         if (Input.GetMouseButton(1))
