@@ -51,11 +51,47 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Rooms/Room1_14.unity
     guid: 51fceb3f10e5d704ea15a257580098b2
   - enabled: 1
-    path: Assets/Scenes/Main Rooms/Room2_7.unity
-    guid: a24a918a36ccfca45a4540abe9a8f002
+    path: Assets/Scenes/Main Rooms/Room2_1.unity
+    guid: c7ad97c6935cc2e45b2663d9f3924cce
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_2.unity
+    guid: 227572fcf85892746819296958958d2c
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_3.unity
+    guid: efa9f010d521860468e1f265a8651245
   - enabled: 1
     path: Assets/Scenes/Main Rooms/Room2_4.unity
     guid: 07f93d73d407d9d44af5c700ca2f3544
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_5.unity
+    guid: 6a926acdc3c091c4da233e77469ec574
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_6.unity
+    guid: bdf8f19516450884eb3bc9c129bb1f26
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_7.unity
+    guid: a24a918a36ccfca45a4540abe9a8f002
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_8.unity
+    guid: 4599f833db5bb1f4aa709fa3d53b53cc
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_9.unity
+    guid: d0aba1930878ca146a185ef56e86ccdf
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_10.unity
+    guid: 72a26f926f102fd4d8d784dd57552222
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_11.unity
+    guid: 4044d5dd489e70c44ae4721cac38bf0b
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_12.unity
+    guid: 1f906f820d1382a46af17c17eee594e8
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_13.unity
+    guid: 083c9a58bcd770b4693f941ceadcb6e5
+  - enabled: 1
+    path: Assets/Scenes/Main Rooms/Room2_14.unity
+    guid: f966dfea6c9088041829d85bbaa540db
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
