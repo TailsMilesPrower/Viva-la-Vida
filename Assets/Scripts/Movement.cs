@@ -46,7 +46,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField]
     float currentHealth;
-    float maxHealth = 20f;
+    float maxHealth = 50f;
     float damage = 10f;
     float healing = 10f;
 

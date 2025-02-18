@@ -669,7 +669,7 @@ MonoBehaviour:
   inventoryScreen: {fileID: 0}
   aiming: 0
   state: 0
-  currentHealth: 0
+  currentHealth: 50
   gameManager: {fileID: 0}
 --- !u!114 &2324821955454943879
 MonoBehaviour:

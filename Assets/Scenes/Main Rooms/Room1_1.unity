@@ -3149,52 +3149,8 @@ MonoBehaviour:
   m_VersionIndex: 5550
   m_IsSelectable: 1
   m_SelectedFaces: 
-  m_SelectedEdges:
-  - a: 215
-    b: 214
-  - a: 141
-    b: 140
-  - a: 134
-    b: 133
-  - a: 127
-    b: 126
-  - a: 120
-    b: 119
-  - a: 113
-    b: 112
-  - a: 106
-    b: 105
-  - a: 99
-    b: 98
-  - a: 92
-    b: 91
-  - a: 85
-    b: 84
-  - a: 81
-    b: 80
-  - a: 207
-    b: 208
-  - a: 200
-    b: 201
-  - a: 193
-    b: 194
-  - a: 186
-    b: 187
-  - a: 179
-    b: 180
-  - a: 172
-    b: 173
-  - a: 165
-    b: 166
-  - a: 158
-    b: 159
-  - a: 151
-    b: 152
-  - a: 147
-    b: 148
-  - a: 1
-    b: 0
-  m_SelectedVertices: d7000000d60000008d0000008c00000086000000850000007f0000007e000000780000007700000071000000700000006a0000006900000063000000620000005c0000005b00000055000000540000005100000050000000cf000000d0000000c8000000c9000000c1000000c2000000ba000000bb000000b3000000b4000000ac000000ad000000a5000000a60000009e0000009f000000970000009800000093000000940000000100000000000000
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &121865405
 Transform:
   m_ObjectHideFlags: 0
@@ -10119,7 +10075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5061211484470418040, guid: d9c2d29f2b1a74346bb949f4ab29efc7, type: 3}
       propertyPath: currentHealth
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5061211484470418040, guid: d9c2d29f2b1a74346bb949f4ab29efc7, type: 3}
       propertyPath: virtualCamera
