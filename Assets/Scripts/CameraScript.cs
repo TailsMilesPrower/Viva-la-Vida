@@ -38,6 +38,10 @@ public class CameraScript : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if(currentScene.name == "Death scene")
+        {
+            Destroy(this.gameObject);
+        }
 
         if (Input.GetKey(KeyCode.S))
         {
