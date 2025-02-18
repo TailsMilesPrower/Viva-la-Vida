@@ -8,8 +8,6 @@ public class LockedDoorScript : MonoBehaviour
     private GameManager gameManager;
     public Movement player;
 
-    public GameObject roomCheck;
-
     public GameObject dialougeBox;
     public TMP_Text dialougeText;
     public bool playerInRange = false;
@@ -33,11 +31,11 @@ public class LockedDoorScript : MonoBehaviour
     {
         //Assigning the game manager
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        roomCheck = GameObject.Find("RoomEntryCheck");
         player = GameObject.Find("Player").GetComponent<Movement>();
         doorScript = this.GetComponent<DoorScript>();
         dialougeBox = GameObject.Find("DialougeBox");
         dialougeText = GameObject.Find("DialougeText").GetComponent<TMP_Text>();
+
         if(hallwayDoor)
         {
             if (gameManager.hallwayUnlocked)
@@ -65,6 +63,46 @@ public class LockedDoorScript : MonoBehaviour
         else if(basementDoor)
         {
             if(gameManager.basementUnlocked)
+            {
+                doorScript.enabled = true;
+                this.enabled = false;
+            }
+        }
+        else if (secondFloorDoor)
+        {
+            if (gameManager.secondFloorUnlocked)
+            {
+                doorScript.enabled = true;
+                this.enabled = false;
+            }
+        }
+        else if(planeteriumDoor)
+        {
+            if (gameManager.planetariumUnlocked)
+            {
+                doorScript.enabled = true;
+                this.enabled = false;
+            }
+        }
+        else if (meetingDoor)
+        {
+            if (gameManager.meetingUnlocked)
+            {
+                doorScript.enabled = true;
+                this.enabled = false;
+            }
+        }
+        else if (coinDoor)
+        {
+            if (gameManager.coinUnlocked)
+            {
+                doorScript.enabled = true;
+                this.enabled = false;
+            }
+        }
+        else if (kingsDoor)
+        {
+            if (gameManager.kingsUnlocked)
             {
                 doorScript.enabled = true;
                 this.enabled = false;
@@ -191,6 +229,146 @@ public class LockedDoorScript : MonoBehaviour
                         {
                             inDialouge = true;
                             dialougeText.text = "The basement door is locked with large, old lock. Whatever key unlocks this must be old and rusty.";
+                        }
+                    }
+                }
+                else if (secondFloorDoor)
+                {
+                    if (gameManager.secondFloorKey)
+                    {
+                        if (inDialouge)
+                        {
+                            gameManager.secondFloorUnlocked = true;
+                            UnlockDoor();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "You unlocked the second floor.";
+                        }
+                    }
+                    else
+                    {
+                        if (inDialouge)
+                        {
+                            CloseDialouge();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "The door to the second floor is locked. Maybe you can find the key lying around somewhere?";
+                        }
+                    }
+                }
+                else if (planeteriumDoor)
+                {
+                    if (gameManager.planetariumKey)
+                    {
+                        if (inDialouge)
+                        {
+                            gameManager.planetariumUnlocked = true;
+                            UnlockDoor();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "You unlocked the planetarium.";
+                        }
+                    }
+                    else
+                    {
+                        if (inDialouge)
+                        {
+                            CloseDialouge();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "The door is locked. The doorknob is shaped like a sun.";
+                        }
+                    }
+                }
+                else if (meetingDoor)
+                {
+                    if (gameManager.meetingKey)
+                    {
+                        if (inDialouge)
+                        {
+                            gameManager.meetingUnlocked = true;
+                            UnlockDoor();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "You unlocked the meeting room.";
+                        }
+                    }
+                    else
+                    {
+                        if (inDialouge)
+                        {
+                            CloseDialouge();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "The door is locked. The door is engraved with a large saphire stone.";
+                        }
+                    }
+                }
+                else if (coinDoor)
+                {
+                    if (gameManager.coinOne && gameManager.coinTwo && gameManager.coinThree)
+                    {
+                        if (inDialouge)
+                        {
+                            gameManager.coinUnlocked = true;
+                            UnlockDoor();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "You place the three coins into the slots on the door. A small click can be heard.";
+                        }
+                    }
+                    else
+                    {
+                        if (inDialouge)
+                        {
+                            CloseDialouge();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "You stand before a large, locked oak door. There seems to no keyhole on it. Three equally sized circles are engraved into the door. First hole is made of bronze, second in silver, third in gold. Maybe you have to fit something in them?";
+                        }
+                    }
+                }
+                else if (kingsDoor)
+                {
+                    if (gameManager.kingsKeyOne && gameManager.kingsKeyTwo)
+                    {
+                        if (inDialouge)
+                        {
+                            gameManager.kingsUnlocked = true;
+                            UnlockDoor();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "You unlock the door using both of the crown keys. With all your strength, you push the door open.";
+                        }
+                    }
+                    else
+                    {
+                        if (inDialouge)
+                        {
+                            CloseDialouge();
+                        }
+                        else
+                        {
+                            inDialouge = true;
+                            dialougeText.text = "You stand before a massive door, so huge it would require all your strength to even push it open. It is kept shut by two locks, one blue, the other red. You know it leads to the throne room.";
                         }
                     }
                 }

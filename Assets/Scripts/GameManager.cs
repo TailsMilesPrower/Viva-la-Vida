@@ -48,6 +48,15 @@ public class GameManager : MonoBehaviour
     public bool tunnelUnlocked;
     public bool servantsUnlocked;
     public bool basementUnlocked;
+    public bool secondFloorUnlocked;
+    public bool planetariumUnlocked;
+    public bool meetingUnlocked;
+    public bool coinUnlocked;
+    public bool kingsUnlocked;
+
+    public bool kitchenUnlocked;
+    public bool statueRoomUnlocked;
+    public bool diningUnlocked;
 
     private void Awake()
     {
