@@ -6,7 +6,7 @@ public class EnemyAttackState : MonoBehaviour
     public Transform leftArm;
     public Transform rightArm;
 
-    public float attackRange = 3f;
+    public float attackRange = 1f;
     public float attackSpeed = 2f;
     public float attackDamage = 10f;
     private bool isAttacking = false;
