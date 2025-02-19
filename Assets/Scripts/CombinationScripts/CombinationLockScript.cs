@@ -14,8 +14,6 @@ public class CombinationLockScript : MonoBehaviour
 
     private CameraScript cam;
 
-    public GameObject box;
-
     public string correctCombination;
 
 
@@ -59,6 +57,12 @@ public class CombinationLockScript : MonoBehaviour
                     inDialouge = true;
                     player.enabled = false;
                     cam.enabled = false;
+                    playerInput.gameObject.GetComponent<Image>().enabled = true;
+                    playerInput.enabled = true;
+                    foreach (Transform child in playerInput.gameObject.transform)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
                     playerInput.gameObject.SetActive(true);
                 }
             }
@@ -70,18 +74,19 @@ public class CombinationLockScript : MonoBehaviour
                 if(playerInput.text == correctCombination)
                 {
                     Debug.Log("Correct combination");
-                    box.GetComponent<Renderer>().material.color = Color.green;
                     player.enabled = true;
                     playerInRange = false;
                     puzzleSolved = true;
-                    playerInput.gameObject.SetActive(true);
-                    playerInput.gameObject.GetComponent<Image>().enabled = false;
+                    playerInput.gameObject.SetActive(false);
+                    /*playerInput.gameObject.GetComponent<Image>().enabled = false;
                     playerInput.enabled = false;
                     foreach (Transform child in playerInput.gameObject.transform)
                     {
                         child.gameObject.SetActive(false);
-                    }
-
+                    }*/
+                    GetComponent<DoorScript>().enabled = true;
+                    GetComponent<DoorScript>().playerInDoor = true;
+                    this.enabled = false;
                 }
                 else
                 {

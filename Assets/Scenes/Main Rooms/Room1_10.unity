@@ -1587,7 +1587,7 @@ Transform:
   m_GameObject: {fileID: 680094822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.860003, y: 4.6221695, z: -136.89287}
+  m_LocalPosition: {x: 9.859999, y: 4.622168, z: -127.61122}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6419,8 +6419,8 @@ MonoBehaviour:
   m_SerializedVersion: 0
   m_AgentTypeID: 0
   m_CollectObjects: 1
-  m_Size: {x: 33.74013, y: 3.052173, z: 30.14991}
-  m_Center: {x: -12.045883, y: -0.5260867, z: 5.0158424}
+  m_Size: {x: 40.749634, y: 3.052173, z: 39.296875}
+  m_Center: {x: -29.721676, y: -0.5260867, z: 9.589325}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
