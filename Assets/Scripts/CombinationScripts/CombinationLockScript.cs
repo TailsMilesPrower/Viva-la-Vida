@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class CombinationLockScript : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class CombinationLockScript : MonoBehaviour
 
     private Movement player;
 
-    private CameraScript camera;
+    private CameraScript cam;
 
     public GameObject box;
 
@@ -23,7 +24,13 @@ public class CombinationLockScript : MonoBehaviour
     {
         playerInput = GameObject.Find("PlayerInput").GetComponent<TMP_InputField>();
         player = GameObject.Find("Player").GetComponent<Movement>();
-        camera = Camera.main.GetComponent<CameraScript>();
+        cam = Camera.main.GetComponent<CameraScript>();
+        playerInput.gameObject.GetComponent<Image>().enabled = true;
+        playerInput.enabled = true;
+        foreach(Transform child in playerInput.gameObject.transform)
+        {
+            child.gameObject.SetActive(true);
+        }
         playerInput.gameObject.SetActive(false);
     }
 
@@ -38,14 +45,20 @@ public class CombinationLockScript : MonoBehaviour
                 {
                     inDialouge = false;
                     player.enabled = true;
-                    camera.enabled = true;
-                    playerInput.gameObject.SetActive(false);
+                    cam.enabled = true;
+                    playerInput.gameObject.GetComponent<Image>().enabled = false;
+                    playerInput.enabled = false;
+                    foreach (Transform child in playerInput.gameObject.transform)
+                    {
+                        child.gameObject.SetActive(false);
+                    }
+                    playerInput.gameObject.SetActive(true);
                 }
                 else
                 {
                     inDialouge = true;
                     player.enabled = false;
-                    camera.enabled = false;
+                    cam.enabled = false;
                     playerInput.gameObject.SetActive(true);
                 }
             }
@@ -58,10 +71,16 @@ public class CombinationLockScript : MonoBehaviour
                 {
                     Debug.Log("Correct combination");
                     box.GetComponent<Renderer>().material.color = Color.green;
-                    playerInput.gameObject.SetActive(false);
                     player.enabled = true;
                     playerInRange = false;
                     puzzleSolved = true;
+                    playerInput.gameObject.SetActive(true);
+                    playerInput.gameObject.GetComponent<Image>().enabled = false;
+                    playerInput.enabled = false;
+                    foreach (Transform child in playerInput.gameObject.transform)
+                    {
+                        child.gameObject.SetActive(false);
+                    }
 
                 }
                 else
