@@ -21,6 +21,7 @@ public class StatueMoving : MonoBehaviour
                 currentpoint.IsOccupied = true;
             }
         }
+        player = GameObject.Find("Player");
     }
 
     private void OnCollisionEnter(Collision other) {
