@@ -23,7 +23,7 @@ public class StatueMoving : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnCollisionEnter(Collision other) {
         if (waitForTriggerUpdate > Time.realtimeSinceStartup) {
             return ;
         }
@@ -43,10 +43,16 @@ public class StatueMoving : MonoBehaviour
         }
         if (transformPoint != null) {
             currentpoint.IsOccupied = false;
-            transform.position = new Vector3(transformPoint.position.x, this.transform.position.y, transformPoint.position.z);
+            //transform.position = new Vector3(transformPoint.position.x, this.transform.position.y, transformPoint.position.z);
             currentpoint = transformPoint.gameObject.GetComponent<PointControll>() ;
             currentpoint.IsOccupied = true;
         }
         waitForTriggerUpdate = Time.realtimeSinceStartup + timeDelay;
+    }
+
+    private void FixedUpdate() {
+        if (transform.position != currentpoint.transform.position) {
+            transform.position = Vector3.Lerp(transform.position, currentpoint.transform.position, Time.deltaTime * 4f);
+        }
     }
 }
