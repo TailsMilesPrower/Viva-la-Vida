@@ -1730,7 +1730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCorrectPlanet: 0
-  correctPlanet: {fileID: 281786734}
+  correctPlanet: {fileID: 397966793}
   currentlyEnabledPlanet: {fileID: 1205204888}
   planets:
   - {fileID: 543625845}
@@ -5239,7 +5239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCorrectPlanet: 0
-  correctPlanet: {fileID: 71553744}
+  correctPlanet: {fileID: 858229813}
   currentlyEnabledPlanet: {fileID: 1053634358}
   planets:
   - {fileID: 1566009775}
@@ -5968,7 +5968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCorrectPlanet: 0
-  correctPlanet: {fileID: 123585145}
+  correctPlanet: {fileID: 1618084971}
   currentlyEnabledPlanet: {fileID: 823996260}
   planets:
   - {fileID: 1618084971}
@@ -9420,61 +9420,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2140747839}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1460375345
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1460375347}
-  - component: {fileID: 1460375346}
-  m_Layer: 0
-  m_Name: PlanetPicker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1460375346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1460375345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9dbb1ea6fb0e454189f3c20f74bb3a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasSun: 0
-  hasMercury: 0
-  hasVenus: 0
-  hasEarth: 0
-  hasMars: 0
-  hasJupiter: 0
-  hasSaturn: 0
-  hasUranus: 0
-  buttonMenuOpen: 0
-  currentStand: {fileID: 0}
-  player: {fileID: 0}
---- !u!4 &1460375347
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1460375345}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4092565, y: 6.348279, z: -166.97147}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1528407513
 GameObject:
   m_ObjectHideFlags: 0
@@ -12918,7 +12863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCorrectPlanet: 0
-  correctPlanet: {fileID: 802780873}
+  correctPlanet: {fileID: 1722580870}
   currentlyEnabledPlanet: {fileID: 397344816}
   planets:
   - {fileID: 802780873}
@@ -13332,35 +13277,17 @@ MonoBehaviour:
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
   dialouge:
-  - Eons ago, peace ruled in the world, as Zeus, king of the gods, ruled the world.
-  - However, in the darkness, old enemies stirred.
-  - Gaia, goddess of the earth, and Ouranos, god of the sky, had become unhappy with
-    the way the Olympians ran the world.
-  - And so, they conspired to bring down Zeus and bring about a return to the golden
-    age that had previously reigned over humanity.
-  - And so, the two traveled down to Tartarus, where they found their son, Kronos,
-    who had been cast down there by Zeus.
-  - Out from the depths of Tartarus, the three gods emerged.
-  - Ouranos, weakened from his defeat at the hands of Kronos, stayed behing, as Gaia
-    and Kronos continued on.
-  - Gaia called on the earth to open wide, unleashing all the horrors trapped in
-    Tartarus.
-  - Kronos, flanked by Gaia, charged up Olympus, hungry for revenge.
-  - The first god they encountered was Aphrodite, goddess of love, who was strolling
-    peacefully through the meadows.
-  - Aphrodite was no war goddess, so she turned herself into a dove and flew in panick
-    far far away, until she reached the edge of the world, where she would hide from
-    the chaos.
-  - Helios, god of the sun, saw the chaos from his spot in the heavens. In haste,
-    he traveled down to Olympus, where he was met with Zeus, Ares, and Hermes
-  - After hearing of the incoming storm, Zeus sent Hermes to gather reinforcements.
-  - Ares, always eager for a fight, burst out of Olympus, meeting Kronos head-on
-    in a clash that would shake the earth.
-  - Behind Ares was Zeus, who's lightning rained down on the battlefield, striking
-    all those who wished to bring him down.
-  - Flanking Zeus was Helios, who's chariot scorched the ground with fire and flame.
-    All those who stood in his way were reduced to ash.
-  - And thus, the second Titan war began.
+  - Gaia was born first, as she was goddess of the eternal earth.
+  - Second was Ouranos, god of the sky, Gaia's husband and murderer of her children.
+  - Third was Kronos, god of time, and child of Gaia and Ouranos. Kronos rebelled
+    against his father, only to replace him. The circle of of godhood would continue
+    in him.
+  - Fourth was Helios, god of the sun, who could see all from his seat in the heavens.
+  - Fifth was Zeus, son of Kronos. Like Kronos before him, he would rebel against
+    his father and become king of the gods.
+  - Sixth was Ares, son of Zeus, and the god of war and courage.
+  - Seventh was Aphrodite, daughter of Zeus, and goddess of love and beauty.
+  - 'Eighth was Hermes, son of Zeus, and the god of travellers and thieves. '
   playerInRange: 0
   lineNumber: 0
   outlineEneabled: 1
@@ -13606,7 +13533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCorrectPlanet: 0
-  correctPlanet: {fileID: 580804481}
+  correctPlanet: {fileID: 2042477398}
   currentlyEnabledPlanet: {fileID: 539807821}
   planets:
   - {fileID: 620471830}
@@ -14121,7 +14048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCorrectPlanet: 0
-  correctPlanet: {fileID: 1203120574}
+  correctPlanet: {fileID: 131991376}
   currentlyEnabledPlanet: {fileID: 1282079967}
   planets:
   - {fileID: 1282079967}
@@ -14197,7 +14124,6 @@ SceneRoots:
   - {fileID: 1981260142}
   - {fileID: 340326393}
   - {fileID: 2101008563}
-  - {fileID: 1460375347}
   - {fileID: 936443660}
   - {fileID: 1787619508}
   - {fileID: 342002425}
