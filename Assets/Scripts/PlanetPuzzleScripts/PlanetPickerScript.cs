@@ -1,9 +1,12 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlanetPickerScript : MonoBehaviour
 {
+    private PlanetPickerScript instance;
+
     public bool hasSun;
     public bool hasMercury;
     public bool hasVenus;
@@ -13,23 +16,23 @@ public class PlanetPickerScript : MonoBehaviour
     public bool hasSaturn;
     public bool hasUranus;
 
-    private UnityEngine.UI.Image noneButton;
+    private Image noneButton;
     private TMP_Text noneText;
-    private UnityEngine.UI.Image sunButton;
+    private Image sunButton;
     private TMP_Text sunText;
-    private UnityEngine.UI.Image mercuryButton;
+    private Image mercuryButton;
     private TMP_Text mercuryText;
-    private UnityEngine.UI.Image venusButton;
+    private Image venusButton;
     private TMP_Text venusText;
-    private UnityEngine.UI.Image earthButton;
+    private Image earthButton;
     private TMP_Text earthText;
-    private UnityEngine.UI.Image marsButton;
+    private Image marsButton;
     private TMP_Text marsText;
-    private UnityEngine.UI.Image jupiterButton;
+    private Image jupiterButton;
     private TMP_Text jupiterText;
-    private UnityEngine.UI.Image saturnButton;
+    private Image saturnButton;
     private TMP_Text saturnText;
-    private UnityEngine.UI.Image uranusButton;
+    private Image uranusButton;
     private TMP_Text uranusText;
 
     public bool buttonMenuOpen;
@@ -43,31 +46,43 @@ public class PlanetPickerScript : MonoBehaviour
 
     private void Start()
     {
-        noneButton = GameObject.Find("NoneButton").GetComponent<UnityEngine.UI.Image>();
+        // This code is used to make sure there are never more than one of this
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+
+        noneButton = GameObject.Find("NoneButton").GetComponent<Image>();
         noneText = GameObject.Find("NoneButton").GetComponentInChildren<TMP_Text>();
 
-        sunButton = GameObject.Find("SunButton").GetComponent<UnityEngine.UI.Image>();
+        sunButton = GameObject.Find("SunButton").GetComponent<Image>();
         sunText = GameObject.Find("SunButton").GetComponentInChildren<TMP_Text>();
 
-        mercuryButton = GameObject.Find("MercuryButton").GetComponent<UnityEngine.UI.Image>();
+        mercuryButton = GameObject.Find("MercuryButton").GetComponent<Image>();
         mercuryText = GameObject.Find("MercuryButton").GetComponentInChildren<TMP_Text>();
 
-        venusButton = GameObject.Find("VenusButton").GetComponent<UnityEngine.UI.Image>();
+        venusButton = GameObject.Find("VenusButton").GetComponent<Image>();
         venusText = GameObject.Find("VenusButton").GetComponentInChildren<TMP_Text>();
 
-        earthButton = GameObject.Find("EarthButton").GetComponent<UnityEngine.UI.Image>();
+        earthButton = GameObject.Find("EarthButton").GetComponent<Image>();
         earthText = GameObject.Find("EarthButton").GetComponentInChildren<TMP_Text>();
 
-        marsButton = GameObject.Find("MarsButton").GetComponent<UnityEngine.UI.Image>();
+        marsButton = GameObject.Find("MarsButton").GetComponent<Image>();
         marsText = GameObject.Find("MarsButton").GetComponentInChildren<TMP_Text>();
 
-        jupiterButton = GameObject.Find("JupiterButton").GetComponent<UnityEngine.UI.Image>();
+        jupiterButton = GameObject.Find("JupiterButton").GetComponent<Image>();
         jupiterText = GameObject.Find("JupiterButton").GetComponentInChildren<TMP_Text>();
 
-        saturnButton = GameObject.Find("SaturnButton").GetComponent<UnityEngine.UI.Image>();
+        saturnButton = GameObject.Find("SaturnButton").GetComponent<Image>();
         saturnText = GameObject.Find("SaturnButton").GetComponentInChildren<TMP_Text>();
 
-        uranusButton = GameObject.Find("UranusButton").GetComponent<UnityEngine.UI.Image>();
+        uranusButton = GameObject.Find("UranusButton").GetComponent<Image>();
         uranusText = GameObject.Find("UranusButton").GetComponentInChildren<TMP_Text>();
 
         dialougeBox = GameObject.Find("DialougeBox");
@@ -78,6 +93,17 @@ public class PlanetPickerScript : MonoBehaviour
 
     private void Update()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name == "TutorialScene")
+        {
+            Destroy(this.gameObject);
+        }
+        if (currentScene.name == "Death scene")
+        {
+            Destroy(this.gameObject);
+        }
+
         if (buttonMenuOpen)
         {
             noneButton.enabled = true;

@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 829112620}
         m_TargetAssemblyTypeName: PlanetPickerScript, Assembly-CSharp
         m_MethodName: PlaceNone
         m_Mode: 1
@@ -1395,7 +1395,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 829112620}
         m_TargetAssemblyTypeName: PlanetPickerScript, Assembly-CSharp
         m_MethodName: PlaceUranus
         m_Mode: 1
@@ -4740,7 +4740,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 829112620}
         m_TargetAssemblyTypeName: PlanetPickerScript, Assembly-CSharp
         m_MethodName: PlaceVenus
         m_Mode: 1
@@ -5852,7 +5852,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 829112620}
         m_TargetAssemblyTypeName: PlanetPickerScript, Assembly-CSharp
         m_MethodName: PlaceSun
         m_Mode: 1
@@ -8951,6 +8951,61 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.9, y: 12.778924, z: -132.302}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &829112619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 829112621}
+  - component: {fileID: 829112620}
+  m_Layer: 0
+  m_Name: PlanetPicker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &829112620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829112619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9dbb1ea6fb0e454189f3c20f74bb3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasSun: 0
+  hasMercury: 0
+  hasVenus: 0
+  hasEarth: 0
+  hasMars: 0
+  hasJupiter: 0
+  hasSaturn: 0
+  hasUranus: 0
+  buttonMenuOpen: 0
+  currentStand: {fileID: 0}
+  player: {fileID: 0}
+--- !u!4 &829112621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829112619}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.4092565, y: 6.348279, z: -166.97147}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19522,7 +19577,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 829112620}
         m_TargetAssemblyTypeName: PlanetPickerScript, Assembly-CSharp
         m_MethodName: PlaceEarth
         m_Mode: 1
@@ -21166,7 +21221,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 829112620}
         m_TargetAssemblyTypeName: PlanetPickerScript, Assembly-CSharp
         m_MethodName: PlaceSaturn
         m_Mode: 1
@@ -21421,7 +21476,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 829112620}
         m_TargetAssemblyTypeName: PlanetPickerScript, Assembly-CSharp
         m_MethodName: PlaceJupiter
         m_Mode: 1
@@ -21895,7 +21950,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 829112620}
         m_TargetAssemblyTypeName: PlanetPickerScript, Assembly-CSharp
         m_MethodName: PlaceMars
         m_Mode: 1
@@ -23780,7 +23835,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 829112620}
         m_TargetAssemblyTypeName: PlanetPickerScript, Assembly-CSharp
         m_MethodName: PlaceMercury
         m_Mode: 1
@@ -26123,6 +26178,7 @@ SceneRoots:
   - {fileID: 2041821753}
   - {fileID: 472850950}
   - {fileID: 1645476389}
+  - {fileID: 829112621}
   - {fileID: 878384293}
   - {fileID: 240382028}
   - {fileID: 1400929420}
