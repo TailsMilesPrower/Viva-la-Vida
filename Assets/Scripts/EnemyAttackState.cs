@@ -70,12 +70,14 @@ public class EnemyAttackState : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.1f); //This is a small delay before dealing damage
 
         if (playerMovement != null && Vector3.Distance(transform.position, player.position) <= attackRange) 
         {
             playerMovement.ChangeHealth(-attackDamage);
         }
+
+        yield return new WaitForSeconds(0.2f); //This is to time the delay when the arms reset
 
         elapsedTime = 0f;
         while (elapsedTime < 1f / attackSpeed)
