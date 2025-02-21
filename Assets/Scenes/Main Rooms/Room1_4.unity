@@ -3386,6 +3386,7 @@ GameObject:
   - component: {fileID: 1892491681}
   - component: {fileID: 1892491680}
   - component: {fileID: 1892491678}
+  - component: {fileID: 1892491685}
   m_Layer: 0
   m_Name: Painting
   m_TagString: Untagged
@@ -3521,6 +3522,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1892491685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892491677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a001ac04f266144a8c0ee5274acb804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  roomCheck: {fileID: 0}
+  dialougeBox: {fileID: 0}
+  dialougeText: {fileID: 0}
+  playerInRange: 0
+  coinOne: 0
+  coinTwo: 0
+  coinThree: 0
+  sword: 0
+  clothPile: 1
+  book: 0
+  toiletClogged: 0
+  hallwayKey: 0
+  planetariumKey: 0
+  meetingKey: 0
+  secondFloorKey: 0
+  servantsKey: 0
+  tunnelKey: 0
+  basementKey: 0
+  kingsKeyOne: 0
+  kingsKeyTwo: 0
 --- !u!1 &2043045293
 GameObject:
   m_ObjectHideFlags: 0
