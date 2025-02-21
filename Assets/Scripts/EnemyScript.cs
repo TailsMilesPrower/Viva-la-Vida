@@ -43,18 +43,11 @@ public class EnemyScript : MonoBehaviour
         {
             playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
 
-            if (playerTransform != null)
+            if (playerTransform == null)
             {
                 return;
             }
         }
-
-        //This makes the enemy move towards the player
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, (speed * Time.deltaTime));
-        //This makes the enemy look at the player
-        transform.LookAt(player.transform.position);
-
-       // nav.destination = playerTransform.position;
  
         if (!isStopped && nav != null) 
         {
@@ -63,7 +56,23 @@ public class EnemyScript : MonoBehaviour
 
         /*
         //Lyubo added the things below to an conditional statement, so the enemy will only move when not stopped
+
+        //This makes the enemy move towards the player
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, (speed * Time.deltaTime));
+        //This makes the enemy look at the player
+        transform.LookAt(player.transform.position);
+
+       // nav.destination = playerTransform.position;
+
         */
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -103,7 +112,6 @@ public class EnemyScript : MonoBehaviour
         if (nav != null)
         {
             nav.isStopped = true;
-            nav.enabled = false;
         }
     }
 
@@ -117,7 +125,6 @@ public class EnemyScript : MonoBehaviour
         isStopped = false;
         if (nav != null)
         {
-            nav.enabled = true;
             nav.isStopped = false;
             nav.SetDestination(playerTransform.position);
         }

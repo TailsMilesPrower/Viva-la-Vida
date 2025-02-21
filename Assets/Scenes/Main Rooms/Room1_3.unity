@@ -1076,7 +1076,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: speed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: player
@@ -6558,7 +6558,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: speed
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: player
