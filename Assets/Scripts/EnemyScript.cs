@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class EnemyScript : MonoBehaviour
     private Transform playerTransform;
     private NavMeshAgent nav;
     private bool isStopped = false;
-
+    
     private void Start()
     {
         player = GameObject.Find("Player");
@@ -30,7 +31,15 @@ public class EnemyScript : MonoBehaviour
         if (nav != null)
         {
             nav.speed = speed;
+            nav.isStopped = true;
+            StopCoroutine(StartMovementWithDelay());
         }
+    }
+
+    private IEnumerator StartMovementWithDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        ResumeMovement();
     }
 
     // Update is called once per frame
@@ -45,7 +54,7 @@ public class EnemyScript : MonoBehaviour
                 return;
             }
         }
-        
+                
         if (!isStopped && nav != null) 
         {
             nav.SetDestination(playerTransform.position);
@@ -101,11 +110,7 @@ public class EnemyScript : MonoBehaviour
         {
             nav.isStopped = true;
             nav.enabled = false;
-            //nav.velocity = Vector3.zero;
-            //nav.speed = 0;
         }
-
-        GetComponent<Rigidbody>().linearVelocity = Vector3.zero; 
     }
 
     public void ResumeMovement()
@@ -120,7 +125,6 @@ public class EnemyScript : MonoBehaviour
         {
             nav.enabled = true;
             nav.isStopped = false;
-            //nav.speed = speed;
             nav.SetDestination(playerTransform.position);
         }
     }

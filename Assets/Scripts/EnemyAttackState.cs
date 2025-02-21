@@ -6,8 +6,8 @@ public class EnemyAttackState : MonoBehaviour
     public Transform leftArm;
     public Transform rightArm;
 
-    public float attackRange = 1f;
-    public float attackSpeed = 2f;
+    public float attackRange = 1.3f;
+    public float attackSpeed = 2.5f;
     public float attackDamage = 10f;
     private bool isAttacking = false;
     private Movement playerMovement;
@@ -28,6 +28,7 @@ public class EnemyAttackState : MonoBehaviour
         leftArmAttackRotation = Quaternion.Euler(-45, 0, 0) * leftArmDefaultRotation;
         rightArmAttackRotation = Quaternion.Euler(-45, 0, 0) * rightArmDefaultRotation;
 
+        enemyMovement = GetComponent<EnemyScript>();
         FindPlayer();
     }
 
@@ -44,11 +45,19 @@ public class EnemyAttackState : MonoBehaviour
         if (distance <= attackRange)
         {
             if (!isAttacking)
+            {
+                if (enemyMovement != null)
+                {
+                    enemyMovement.StopMovement();
+                }
+                
                 StartCoroutine(AttackAnimation());
+            }
+                
         }
         else if (!isAttacking && enemyMovement != null)
         {
-            enemyMovement.ResumeMovement(); //This will resume their movement when player moves away
+            enemyMovement.ResumeMovement(); //This will resume their movement when the player moves away
         }
     }
 
@@ -80,14 +89,14 @@ public class EnemyAttackState : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(0.1f); //This is a small delay before dealing damage
+        yield return new WaitForSeconds(0.08f); //This is a small delay before dealing damage
 
         if (playerMovement != null && Vector3.Distance(transform.position, player.position) <= attackRange) 
         {
             playerMovement.ChangeHealth(-attackDamage);
         }
 
-        yield return new WaitForSeconds(0.2f); //This is to time the delay when the arms reset
+        yield return new WaitForSeconds(0.15f); //This is to time the delay when the arms reset
 
         elapsedTime = 0f;
         while (elapsedTime < 1f / attackSpeed)
@@ -99,6 +108,12 @@ public class EnemyAttackState : MonoBehaviour
         }
 
         isAttacking = false;
+
+        if (Vector3.Distance(transform.position, player.position) > attackRange)
+        {
+            enemyMovement.ResumeMovement();
+        }
+
     }
 
 }
