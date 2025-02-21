@@ -8733,7 +8733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3093974979188267041, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       propertyPath: sceneName
-      value: Room1_9
+      value: KingsRoom
       objectReference: {fileID: 0}
     - target: {fileID: 3093974979188267041, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       propertyPath: doorNumber
@@ -8745,7 +8745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3471631330561862319, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       propertyPath: m_Size.x
-      value: 0.7624039
+      value: 1.2852644
+      objectReference: {fileID: 0}
+    - target: {fileID: 3471631330561862319, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5827647
       objectReference: {fileID: 0}
     - target: {fileID: 3471631330561862319, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       propertyPath: m_Size.z
@@ -8753,11 +8757,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3471631330561862319, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       propertyPath: m_Center.x
-      value: 0.0024340828
+      value: -0.0064905616
       objectReference: {fileID: 0}
     - target: {fileID: 3471631330561862319, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       propertyPath: m_Center.y
-      value: 0.0022147943
+      value: 0.291384
       objectReference: {fileID: 0}
     - target: {fileID: 3471631330561862319, guid: fd9da421811486e45bbe89db2b69ddd3, type: 3}
       propertyPath: m_Center.z
