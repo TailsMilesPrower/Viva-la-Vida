@@ -128,6 +128,27 @@ public class PickupObject : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        else if(clothPile)
+        {
+            if(gameManager.clothPile)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if(sword)
+        {
+            if(gameManager.sword)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if(book)
+        {
+            if(gameManager.book)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -306,6 +327,48 @@ public class PickupObject : MonoBehaviour
                     {
                         inDialouge = true;
                         dialougeText.text = "You pick up a large red key. It's head is a replica of the crown of Denmark.";
+                    }
+                }
+                else if (clothPile)
+                {
+                    if (inDialouge)
+                    {
+                        gameManager.clothPile = true;
+                        CLoseDialouge();
+                        Destroy(gameObject);
+                    }
+                    else
+                    {
+                        inDialouge = true;
+                        dialougeText.text = "You pick up a pile of cloth. Maybe you can use it somewhere?";
+                    }
+                }
+                else if (sword)
+                {
+                    if (inDialouge)
+                    {
+                        gameManager.sword = true;
+                        CLoseDialouge();
+                        Destroy(gameObject);
+                    }
+                    else
+                    {
+                        inDialouge = true;
+                        dialougeText.text = "You pick up a large sword. Weird place to keep one.";
+                    }
+                }
+                else if (book)
+                {
+                    if (inDialouge)
+                    {
+                        gameManager.book = true;
+                        CLoseDialouge();
+                        Destroy(gameObject);
+                    }
+                    else
+                    {
+                        inDialouge = true;
+                        dialougeText.text = "You pick up a blue book. It has a small metal thing sticking out of its pages. Maybe its a key for something?";
                     }
                 }
             }

@@ -3385,7 +3385,6 @@ GameObject:
   - component: {fileID: 1892491682}
   - component: {fileID: 1892491681}
   - component: {fileID: 1892491680}
-  - component: {fileID: 1892491679}
   - component: {fileID: 1892491678}
   m_Layer: 0
   m_Name: Painting
@@ -3412,27 +3411,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &1892491679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892491677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca762171fbce39d42bb655084dc20f40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialougeBox: {fileID: 0}
-  dialougeText: {fileID: 0}
-  dialouge:
-  - A small pile of cloth
-  - Maybe you can use it somewhere?
-  - For now you can't, but it'll be used for a puzzle later
-  playerInRange: 0
-  lineNumber: 0
-  outlineEneabled: 1
 --- !u!65 &1892491680
 BoxCollider:
   m_ObjectHideFlags: 0
