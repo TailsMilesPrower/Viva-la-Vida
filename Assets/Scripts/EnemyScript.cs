@@ -6,6 +6,9 @@ public class EnemyScript : MonoBehaviour
 {
     //A value for the enemy movement speed
     public float speed;
+    
+    //This gives the distance to stop the player
+    public float stoppingDistance = 1.0f; 
 
     //A refrence to the player
     public GameObject player;
@@ -31,6 +34,7 @@ public class EnemyScript : MonoBehaviour
         if (nav != null)
         {
             nav.speed = speed;
+            nav.stoppingDistance = stoppingDistance;
             nav.isStopped = false;
             ResumeMovement();
         }
