@@ -74,9 +74,11 @@ public class CombinationLockScript : MonoBehaviour
                 if(playerInput.text == correctCombination)
                 {
                     Debug.Log("Correct combination");
+                    inDialouge = false;
                     player.enabled = true;
                     playerInRange = false;
                     puzzleSolved = true;
+                    cam.enabled = true;
                     playerInput.gameObject.SetActive(false);
                     /*playerInput.gameObject.GetComponent<Image>().enabled = false;
                     playerInput.enabled = false;
