@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     public bool book;
 
     public bool toiletClogged;
+    public bool swordPlaced;
+    public bool bookPlaced;
 
     public bool hallwayKey;
     public bool planetariumKey;
