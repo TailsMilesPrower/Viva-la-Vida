@@ -3211,9 +3211,6 @@ GameObject:
   - component: {fileID: 1648376322}
   - component: {fileID: 1648376321}
   - component: {fileID: 1648376320}
-  - component: {fileID: 1648376319}
-  - component: {fileID: 1648376318}
-  - component: {fileID: 1648376317}
   m_Layer: 0
   m_Name: HintBook
   m_TagString: Untagged
@@ -3221,77 +3218,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1648376317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648376316}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0.9547169, g: 0.9220408, b: 0.23597719, a: 1}
-  outlineWidth: 3
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
---- !u!114 &1648376318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648376316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca762171fbce39d42bb655084dc20f40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialougeBox: {fileID: 0}
-  dialougeText: {fileID: 0}
-  dialouge:
-  - Status report
-  - Reports of Swedish warships have begun to increase. One report counted 14 warships
-    spotted near Bornholm.
-  - In the event of an invasion, we would not be in a favorable position. Our army
-    currently only consists of 15 thousand troops.
-  - We recomend that we increase troop recruitment in Norway by 40 thousand.
-  - In other reports, the Laki eruption in Iceland has claimed the lives of 9 thousand
-    locals. The local governor has sent numerous requests for aid.
-  - Unfortunetly, our treasury cannot handle it. We are only able to provide a 4th
-    of the aid he has asked for.
-  - The eruption has also claimed the lives of thousands of lifestock. Estamates
-    put it somewhere at 230 thousand animals dead.
-  - We recomend an immediate gathering of the council to discuss these matters.
-  - Signed, Count Johan Henrik Knuth
-  playerInRange: 0
-  lineNumber: 0
-  outlineEneabled: 1
---- !u!65 &1648376319
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648376316}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.2159529, y: 1.6073585, z: 2.4292636}
-  m_Center: {x: -0.07297608, y: 0.28632092, z: 0.020366495}
 --- !u!65 &1648376320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4174,6 +4100,161 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d206b7494cc45524d8dfdfe59edcc539, type: 3}
+--- !u!1001 &2099435868
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6223
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6223
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6223
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.540113
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0795755
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -151.262
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000003774895
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_Name
+      value: Book1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3451118302482216456, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2099435870}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2099435871}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2099435872}
+  m_SourcePrefab: {fileID: 100100000, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+--- !u!1 &2099435869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+  m_PrefabInstance: {fileID: 2099435868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2099435870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099435869}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!65 &2099435871
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099435869}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0959225, y: 0.28137624, z: 0.98555106}
+  m_Center: {x: -0.00038814545, y: 0.13810053, z: 0.34217027}
+--- !u!114 &2099435872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099435869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca762171fbce39d42bb655084dc20f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialougeBox: {fileID: 0}
+  dialougeText: {fileID: 0}
+  dialouge:
+  - Status report
+  - Reports of Swedish warships have begun to increase. One report counted 14 warships
+    spotted near Bornholm.
+  - In the event of an invasion, we would not be in a favorable position. Our army
+    currently only consists of 15 thousand troops.
+  - We recomend that we increase troop recruitment in Norway by 40 thousand.
+  - In other reports, the Laki eruption in Iceland has claimed the lives of 9 thousand
+    locals. The local governor has sent numerous requests for aid.
+  - Unfortunetly, our treasury cannot handle it. We are only able to provide a 4th
+    of the aid he has asked for.
+  - The eruption has also claimed the lives of thousands of lifestock. Estamates
+    put it somewhere at 230 thousand animals dead.
+  - We recomend an immediate gathering of the council to discuss these matters.
+  - Signed, Count Johan Henrik Knuth
+  playerInRange: 0
+  lineNumber: 0
+  outlineEneabled: 1
 --- !u!1 &2139376657
 GameObject:
   m_ObjectHideFlags: 0
@@ -4751,3 +4832,4 @@ SceneRoots:
   - {fileID: 2139376658}
   - {fileID: 1076086388}
   - {fileID: 975268407}
+  - {fileID: 2099435868}
