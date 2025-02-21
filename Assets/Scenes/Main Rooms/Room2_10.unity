@@ -2432,15 +2432,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6345041699495979259, guid: d206b7494cc45524d8dfdfe59edcc539, type: 3}
       propertyPath: cameraClampMax.x
-      value: 100
+      value: 20.79167
       objectReference: {fileID: 0}
     - target: {fileID: 6345041699495979259, guid: d206b7494cc45524d8dfdfe59edcc539, type: 3}
       propertyPath: cameraClampMin.x
-      value: -100
+      value: 15.34344
       objectReference: {fileID: 0}
     - target: {fileID: 6345041699495979259, guid: d206b7494cc45524d8dfdfe59edcc539, type: 3}
       propertyPath: cameraClampMin.z
-      value: -161.6011
+      value: -159.3631
       objectReference: {fileID: 0}
     - target: {fileID: 7995392172430066686, guid: d206b7494cc45524d8dfdfe59edcc539, type: 3}
       propertyPath: m_Name
