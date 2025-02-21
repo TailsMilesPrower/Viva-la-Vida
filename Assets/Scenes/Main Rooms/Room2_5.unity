@@ -2081,11 +2081,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6345041699495979259, guid: d206b7494cc45524d8dfdfe59edcc539, type: 3}
       propertyPath: cameraClampMax.x
-      value: 100
+      value: 8.18996
       objectReference: {fileID: 0}
     - target: {fileID: 6345041699495979259, guid: d206b7494cc45524d8dfdfe59edcc539, type: 3}
       propertyPath: cameraClampMin.x
-      value: -100
+      value: 5.952493
       objectReference: {fileID: 0}
     - target: {fileID: 6345041699495979259, guid: d206b7494cc45524d8dfdfe59edcc539, type: 3}
       propertyPath: cameraClampMin.z
