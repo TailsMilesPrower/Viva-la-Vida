@@ -12,6 +12,7 @@ public class EnemyAttackState : MonoBehaviour
     private bool isAttacking = false;
     private Movement playerMovement;
     private Transform player;
+    private EnemyScript enemyMovement;
 
     private Quaternion leftArmDefaultRotation;
     private Quaternion rightArmDefaultRotation;
@@ -45,6 +46,10 @@ public class EnemyAttackState : MonoBehaviour
             if (!isAttacking)
                 StartCoroutine(AttackAnimation());
         }
+        else if (!isAttacking && enemyMovement != null)
+        {
+            enemyMovement.ResumeMovement(); //This will resume their movement when player moves away
+        }
     }
 
     void FindPlayer()
@@ -60,6 +65,11 @@ public class EnemyAttackState : MonoBehaviour
     IEnumerator AttackAnimation()
     {
         isAttacking = true;
+        if (enemyMovement != null)
+        {
+            enemyMovement.StopMovement(); // This will stop their movement when attacking
+        }
+
 
         float elapsedTime = 0f;
         while (elapsedTime < 1f / attackSpeed)

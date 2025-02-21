@@ -16,6 +16,7 @@ public class EnemyScript : MonoBehaviour
     //This gives NavMeshAI on the enemy
     private Transform playerTransform;
     private NavMeshAgent nav;
+    private bool isStopped = false;
 
     private void Start()
     {
@@ -24,17 +25,42 @@ public class EnemyScript : MonoBehaviour
         
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         nav = GetComponent<NavMeshAgent>();
+
+        //This will ensure that NavMesh uses the correct speed
+        if (nav != null)
+        {
+            nav.speed = speed;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (playerTransform == null)
+        {
+            playerTransform = GameObject.FindGameObjectWithTag("Player")?.transform;
+            
+            if (playerTransform != null)
+            {
+                return;
+            }
+        }
+        
+        if (!isStopped && nav != null) 
+        {
+            nav.SetDestination(playerTransform.position);
+        }
+
+        /*
+        //Lyubo added the things below to an conditional statement, so the enemy will only move when not stopped
+
         //This makes the enemy move towards the player
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, (speed * Time.deltaTime));
         //This makes the enemy look at the player
         transform.LookAt(player.transform.position);
 
         nav.destination = playerTransform.position;
+        */
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -62,4 +88,41 @@ public class EnemyScript : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    public void StopMovement()
+    {
+        if (isStopped)
+        {
+            return;
+        }
+
+        isStopped = true;
+        if (nav != null)
+        {
+            nav.isStopped = true;
+            nav.enabled = false;
+            //nav.velocity = Vector3.zero;
+            //nav.speed = 0;
+        }
+
+        GetComponent<Rigidbody>().linearVelocity = Vector3.zero; 
+    }
+
+    public void ResumeMovement()
+    {
+        if (!isStopped)
+        {
+            return;
+        }
+        
+        isStopped = false;
+        if (nav != null)
+        {
+            nav.enabled = true;
+            nav.isStopped = false;
+            //nav.speed = speed;
+            nav.SetDestination(playerTransform.position);
+        }
+    }
+
 }
