@@ -125,6 +125,7 @@ public class UnlockItem : MonoBehaviour
                         if (inDialouge)
                         {
                             gameManager.bookPlaced = true;
+                            GetComponent<DoorScript>().enabled = true;
                             PlaceItem();
                         }
                         else
