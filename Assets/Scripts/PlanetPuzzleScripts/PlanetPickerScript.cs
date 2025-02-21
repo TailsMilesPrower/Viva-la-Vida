@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlanetPickerScript : MonoBehaviour
 {
-    private PlanetPickerScript instance;
+    private static PlanetPickerScript instance;
 
     public bool hasSun;
     public bool hasMercury;
