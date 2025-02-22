@@ -16,7 +16,7 @@ public class CombinationLockScript : MonoBehaviour
 
     public string correctCombination;
 
-    private GameManager gameManager;
+    public GameManager gameManager;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
