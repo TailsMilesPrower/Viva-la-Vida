@@ -6,6 +6,8 @@ public class PlanetCheckScript : MonoBehaviour
 
     public GameObject[] stands;
 
+    public GameObject keyItem;
+
     // Update is called once per frame
     void Update()
     {
@@ -21,10 +23,7 @@ public class PlanetCheckScript : MonoBehaviour
         }
         if(planetsInOrder)
         {
-            if(GetComponent<Renderer>().material.color != Color.green)
-            {
-                GetComponent<Renderer>().material.color = Color.green;
-            }
+            keyItem.SetActive(true);
         }
     }
 }
