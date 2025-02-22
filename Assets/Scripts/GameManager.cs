@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
     public bool diningUnlocked;
 
     public bool planetSolved;
+    public bool combinationSolved;
 
     private void Awake()
     {
