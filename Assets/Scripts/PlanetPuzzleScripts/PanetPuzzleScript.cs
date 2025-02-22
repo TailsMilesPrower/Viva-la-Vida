@@ -25,12 +25,23 @@ public class PanetPuzzleScript : MonoBehaviour
 
     public Movement player;
 
+    private GameManager gameManager;
+
     private void Start()
     {
         dialougeBox = GameObject.Find("DialougeBox");
         dialougeText = GameObject.Find("DialougeText").GetComponent<TMP_Text>();
         planetPicker = GameObject.Find("PlanetPicker");
         player = GameObject.Find("Player").GetComponent<Movement>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        if(gameManager.planetSolved)
+        {
+            currentlyEnabledPlanet.SetActive(false);
+            currentlyEnabledPlanet = null;
+            correctPlanet.SetActive(true);
+            currentlyEnabledPlanet = correctPlanet;
+        }
     }
 
     // Update is called once per frame

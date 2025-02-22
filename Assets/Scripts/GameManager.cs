@@ -60,6 +60,8 @@ public class GameManager : MonoBehaviour
     public bool statueRoomUnlocked;
     public bool diningUnlocked;
 
+    public bool planetSolved;
+
     private void Awake()
     {
         //This code is used to make sure there are never more than one game manager
