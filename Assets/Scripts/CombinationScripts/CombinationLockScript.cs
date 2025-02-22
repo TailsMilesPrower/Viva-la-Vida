@@ -18,6 +18,18 @@ public class CombinationLockScript : MonoBehaviour
 
     public GameManager gameManager;
 
+    private void Awake()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        if (gameManager.combinationSolved)
+        {
+            GetComponent<DoorScript>().enabled = true;
+            GetComponent<DoorScript>().playerInDoor = true;
+            this.enabled = false;
+        }
+    }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,7 +37,6 @@ public class CombinationLockScript : MonoBehaviour
         playerInput = GameObject.Find("PlayerInput").GetComponent<TMP_InputField>();
         player = GameObject.Find("Player").GetComponent<Movement>();
         cam = Camera.main.GetComponent<CameraScript>();
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         playerInput.gameObject.GetComponent<Image>().enabled = true;
         playerInput.enabled = true;
         foreach(Transform child in playerInput.gameObject.transform)
@@ -33,13 +44,6 @@ public class CombinationLockScript : MonoBehaviour
             child.gameObject.SetActive(true);
         }
         playerInput.gameObject.SetActive(false);
-
-        if(gameManager.combinationSolved)
-        {
-            GetComponent<DoorScript>().enabled = true;
-            GetComponent<DoorScript>().playerInDoor = true;
-            this.enabled = false;
-        }
     }
 
     // Update is called once per frame
