@@ -62,6 +62,7 @@ public class DialougeScript : MonoBehaviour
             {
                 GetComponent<Outline>().enabled = false;
             }
+            lineNumber--;
         }
     }
 
