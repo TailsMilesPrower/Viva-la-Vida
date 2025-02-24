@@ -179,6 +179,7 @@ public class UnlockItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GetComponent<Outline>().enabled = true;
             playerInRange = true;
         }
     }
@@ -188,6 +189,7 @@ public class UnlockItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GetComponent<Outline>().enabled = false;
             playerInRange = false;
         }
     }
