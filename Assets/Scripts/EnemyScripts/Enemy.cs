@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDistanceFinder
 
     public Transform PlayerTransform;
 
-    public float MaxHealth { get; set; } = 50f;
+    public float MaxHealth { get; set; } = 100f;
     public float currentHealth { get ; set; }
 
     #region StateMachine Variables
@@ -67,6 +67,8 @@ public class Enemy : MonoBehaviour, IDamagable, IDistanceFinder
     public void Die() {
         Destroy(gameObject);
     }
+
+    
     #endregion
 
     #region StatusController

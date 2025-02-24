@@ -9,7 +9,10 @@ public class AttackingState : EnemyState
     private float exitTimer;
     private float timeTilExit;
     private float distanceToCountExit = 5f;
+
+    private Movement movementScript;
     public AttackingState(Enemy enemy, EnemyStateMachine enemyStateMachine) : base(enemy, enemyStateMachine) {
+       movementScript = enemy.PlayerTransform.GetComponent<Movement>();
     }
 
     public override void AnimationTriggerEvent() {
@@ -34,7 +37,8 @@ public class AttackingState : EnemyState
 
             timer = 0f;
 
-            Debug.Log("I try to swang that thang.");
+            movementScript.ChangeHealth(-20f);
+
 
         }
 
