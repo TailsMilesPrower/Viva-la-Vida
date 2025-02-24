@@ -7,6 +7,7 @@ public class UnlockItem : MonoBehaviour
     public bool swordNeeded;
     public bool bookNeeded;
     public bool clothNeeded;
+    public bool upperBathroom;
 
     private GameManager gameManager;
     public Movement player;
@@ -18,6 +19,8 @@ public class UnlockItem : MonoBehaviour
     private bool inDialouge;
 
     public GameObject placedObject;
+
+    public GameObject keyItem;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +34,11 @@ public class UnlockItem : MonoBehaviour
             if(gameManager.swordPlaced)
             {
                 placedObject.SetActive(true);
+                keyItem.SetActive(true);
+                if (gameManager.planetariumKey)
+                {
+                    Destroy(keyItem);
+                }
                 this.enabled = false;
             }
         }
@@ -38,6 +46,8 @@ public class UnlockItem : MonoBehaviour
         {
             if(gameManager.bookPlaced)
             {
+                gameManager.bookPlaced = true;
+                GetComponent<DoorScript>().enabled = true;
                 placedObject.SetActive(true);
                 this.enabled = false;
             }
@@ -47,6 +57,18 @@ public class UnlockItem : MonoBehaviour
             if(gameManager.toiletClogged)
             {
                 placedObject.SetActive(true);
+                this.enabled = false;
+            }
+        }
+        else if(upperBathroom)
+        {
+            if(gameManager.toiletClogged)
+            {
+                keyItem.SetActive(true);
+                if(gameManager.servantsKey)
+                {
+                    Destroy(keyItem);
+                }
                 this.enabled = false;
             }
         }
@@ -69,6 +91,7 @@ public class UnlockItem : MonoBehaviour
                         if(inDialouge)
                         {
                             gameManager.swordPlaced = true;
+                            keyItem.SetActive(true);
                             PlaceItem();
                         }
                         else
