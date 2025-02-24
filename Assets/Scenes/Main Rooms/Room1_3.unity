@@ -4330,7 +4330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &829823714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8435,11 +8435,13 @@ MonoBehaviour:
   swordNeeded: 1
   bookNeeded: 0
   clothNeeded: 0
+  upperBathroom: 0
   player: {fileID: 0}
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
   playerInRange: 0
   placedObject: {fileID: 381918743}
+  keyItem: {fileID: 829823712}
 --- !u!1 &1377787773
 GameObject:
   m_ObjectHideFlags: 0
