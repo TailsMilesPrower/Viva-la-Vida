@@ -60,7 +60,7 @@ public class OneWayDoor : MonoBehaviour
     {
         if(playerInRange)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button1))
             {
                 player.enabled = false;
                 dialougeBox.GetComponent<RawImage>().enabled = true;

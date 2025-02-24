@@ -17,6 +17,9 @@ public class CameraScript : MonoBehaviour
     public Vector3 minCamPosition;
     public Vector3 maxCamPosition;
 
+    //Input values
+    private float verticalInput;
+
     private void Awake()
     {
         //This code is used to make sure there are never more than one camera
@@ -32,6 +35,8 @@ public class CameraScript : MonoBehaviour
 
     private void Update()
     {
+        verticalInput = Input.GetAxisRaw("Vertical");
+
         Scene currentScene = SceneManager.GetActiveScene();
 
         if (currentScene.name == "TutorialScene")
@@ -43,14 +48,14 @@ public class CameraScript : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (verticalInput < 0)
         {
             if(offset.z > cameraZOffsetMax)
             {
                 offset.z -= 2f * Time.deltaTime;
             }
         }
-        else if(Input.GetKey(KeyCode.W))
+        else if(verticalInput > 0)
         {
             if (offset.z < cameraZOffsetMin)
             {

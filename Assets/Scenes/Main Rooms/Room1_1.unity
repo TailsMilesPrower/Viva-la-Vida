@@ -11475,7 +11475,7 @@ PrefabInstance:
     - target: {fileID: 5061211484470418040, guid: d9c2d29f2b1a74346bb949f4ab29efc7, type: 3}
       propertyPath: inventoryScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2019401547}
     - target: {fileID: 6010848117408199773, guid: d9c2d29f2b1a74346bb949f4ab29efc7, type: 3}
       propertyPath: m_Name
       value: Player

@@ -18,8 +18,6 @@ public class Movement : MonoBehaviour
     private float moveSpeed;
     public float walkSpeed;
     public float sprintSpeed;
-    //The speed that the player rotates in
-    public float rotationSpeed;
     //The maximum speed that the player can reach
     public float maxSpeed;
 
@@ -155,7 +153,7 @@ public class Movement : MonoBehaviour
         }
 
         //When the player holds down the RMB, the gun appears and the player starts aiming
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) || Input.GetKey(KeyCode.Joystick1Button6))
         {
             aiming = true;
             gun.GetComponent<Renderer>().enabled = true;
@@ -169,7 +167,7 @@ public class Movement : MonoBehaviour
             gunShaft.GetComponent<Renderer>().enabled = false;
         }
         //Pressing the Tab key either opens the inventory screen, or closes it, depending on what its status is
-        if(Input.GetKeyDown(KeyCode.I))
+        if(Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.Joystick1Button13) || Input.GetKeyDown(KeyCode.Tab))
         {
             if(inventoryScreen.activeSelf == false)
             {
@@ -198,7 +196,7 @@ public class Movement : MonoBehaviour
     private void StateHandler()
     {
         //Holding down left shift means the player is sprinting, meaning they move faster
-        if(Input.GetKey(KeyCode.LeftShift))
+        if(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.Joystick1Button4))
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
@@ -224,8 +222,8 @@ public class Movement : MonoBehaviour
         }*/
 }
 
-//A function that takes care of movement
-private void MovePlayer()
+    //A function that takes care of movement
+    private void MovePlayer()
     {
         //moveDirection = (cam.transform.forward * verticalInput) + (cam.transform.right * horizontalInput);
 
@@ -234,9 +232,17 @@ private void MovePlayer()
 
         if (moveDirection != Vector3.zero)
         {
+
             Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 500 * Time.deltaTime);
+            if(!aiming)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 500 * Time.deltaTime);
+            }
+            else
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 200 * Time.deltaTime);
+            }
         }
 
         //Player can only move if they are not aiming their gun

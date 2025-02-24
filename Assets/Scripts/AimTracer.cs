@@ -15,10 +15,14 @@ public class AimTracer : MonoBehaviour
 
     void Update() {
         // Detect right mouse button hold
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) || Input.GetKey(KeyCode.Joystick1Button6))
+        {
             aiming = true;
-        if (Input.GetMouseButtonUp(1))
+        }
+        else
+        {
             aiming = false;
+        }
 
         // Create a ray from the player's position in the forward direction
         Ray ray = new Ray(player.transform.position, player.transform.forward);
