@@ -92,6 +92,7 @@ public class UnlockItem : MonoBehaviour
                         {
                             gameManager.swordPlaced = true;
                             keyItem.SetActive(true);
+
                             PlaceItem();
                         }
                         else
@@ -201,6 +202,7 @@ public class UnlockItem : MonoBehaviour
         dialougeText.enabled = false;
         inDialouge = false;
         placedObject.SetActive(true);
+        GetComponent<Outline>().enabled = false;
         this.enabled = false;
     }
 
