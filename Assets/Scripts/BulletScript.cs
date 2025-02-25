@@ -6,7 +6,7 @@ public class BulletScript : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<EnemyScript>().KillEnemy();
+            collision.gameObject.GetComponent<SmallZombie>().KillEnemy();
         }
         if(collision.gameObject.CompareTag("TriggerEnviorment"))
         {

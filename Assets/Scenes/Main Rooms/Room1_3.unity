@@ -1280,6 +1280,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3317139124868306526, guid: bc29346653880de458760774721b9699, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: speed
       value: 2
@@ -1294,7 +1298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4532127568473764603, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: m_Name
@@ -1357,6 +1361,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7793298037032126722, guid: bc29346653880de458760774721b9699, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 228937513}
+    - targetCorrespondingSourceObject: {fileID: 7793298037032126722, guid: bc29346653880de458760774721b9699, type: 3}
       insertIndex: -1
       addedObject: {fileID: 228937512}
   m_SourcePrefab: {fileID: 100100000, guid: bc29346653880de458760774721b9699, type: 3}
@@ -1387,6 +1394,22 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &228937513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228937511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe2bfa8f84c3194cbc9398fcf547713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  PlayerTransform: {fileID: 0}
+  enemyNum: 2
+  RandomMoveRange: 5
 --- !u!1 &254077628
 GameObject:
   m_ObjectHideFlags: 0
@@ -10400,7 +10423,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853424023}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -10799,6 +10822,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3317139124868306526, guid: bc29346653880de458760774721b9699, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: speed
       value: 2
@@ -10813,7 +10840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3550885502739654890, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4532127568473764603, guid: bc29346653880de458760774721b9699, type: 3}
       propertyPath: m_Name
@@ -10876,6 +10903,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7793298037032126722, guid: bc29346653880de458760774721b9699, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1998735923}
+    - targetCorrespondingSourceObject: {fileID: 7793298037032126722, guid: bc29346653880de458760774721b9699, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1998735922}
   m_SourcePrefab: {fileID: 100100000, guid: bc29346653880de458760774721b9699, type: 3}
@@ -10906,6 +10936,22 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1998735923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998735921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe2bfa8f84c3194cbc9398fcf547713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  PlayerTransform: {fileID: 0}
+  enemyNum: 1
+  RandomMoveRange: 5
 --- !u!43 &2020313816
 Mesh:
   m_ObjectHideFlags: 0

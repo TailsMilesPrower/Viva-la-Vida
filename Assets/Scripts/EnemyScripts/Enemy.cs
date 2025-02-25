@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.MemoryProfiler;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,10 +9,20 @@ public class Enemy : MonoBehaviour, IDamagable, IDistanceFinder
 
     public Transform PlayerTransform;
 
+    protected GameManager gameManager;
+
+    public int enemyNum;
+
+    public float AttackRange;
+
+    #region Health Variables
     public Action OnDamage { get; set; } = delegate { };
 
     public float MaxHealth { get; set; } = 100f;
+    public float DamageDelt { get; set; } = -20f;
     public float currentHealth { get ; set; }
+
+    #endregion
 
     #region StateMachine Variables
 
@@ -40,7 +51,9 @@ public class Enemy : MonoBehaviour, IDamagable, IDistanceFinder
 
     #endregion
 
-    private void Start() {
+    public virtual void Start() {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         currentHealth = MaxHealth;
 
         StateMachine.Initialize(IdleState);
@@ -61,8 +74,12 @@ public class Enemy : MonoBehaviour, IDamagable, IDistanceFinder
     public void Damage(float DamageAmount) {
         currentHealth -= DamageAmount;
         OnDamage?.Invoke();
-        if (currentHealth <= 0) {
-            Die();
+        if (currentHealth <= 0 ) {
+            if (enemyNum == null) {
+                Die();
+            } else {
+                KillEnemy();
+            }
         }
     }
 
@@ -92,4 +109,21 @@ public class Enemy : MonoBehaviour, IDamagable, IDistanceFinder
     }
 
     #endregion
+
+    #region DeathController
+
+    public void KillEnemy() {
+        if (enemyNum == 1) {
+            gameManager.GetComponent<GameManager>().enemyOneDead = true;
+        }
+        else if (enemyNum == 2) {
+            gameManager.GetComponent<GameManager>().enemyTwoDead = true;
+        }
+        else if (enemyNum == 3) {
+            gameManager.GetComponent<GameManager>().enemyThreeDead = true;
+        }
+        Destroy(gameObject);
+    }
+
+        #endregion
 }

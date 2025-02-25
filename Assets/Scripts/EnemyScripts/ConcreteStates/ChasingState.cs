@@ -23,7 +23,7 @@ public class ChasingState : EnemyState
         base.FrameUpdate();
         enemy.MoveEnemy(enemy.PlayerTransform.position);
         
-        if ((enemy.PlayerTransform.position - enemy.transform.position).magnitude < 5f) {
+        if ((enemy.PlayerTransform.position - enemy.transform.position).magnitude < enemy.AttackRange) {
             enemy.AttackDistance(true);
         }
         if (enemy.isWithinAttackDistance) {

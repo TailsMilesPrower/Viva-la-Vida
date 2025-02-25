@@ -4,6 +4,7 @@ using System.Collections;
 
 public class EnemyScript : MonoBehaviour
 {
+    /*
     //A value for the enemy movement speed
     public float speed;
     
@@ -68,7 +69,7 @@ public class EnemyScript : MonoBehaviour
 
        // nav.destination = playerTransform.position;
 
-        */
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -133,5 +134,6 @@ public class EnemyScript : MonoBehaviour
             nav.SetDestination(playerTransform.position);
         }
     }
-
+    
+    */
 }

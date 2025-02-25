@@ -8,7 +8,6 @@ public class AttackingState : EnemyState
 
     private float exitTimer;
     private float timeTilExit;
-    private float distanceToCountExit = 5f;
 
     private Movement movementScript;
     public AttackingState(Enemy enemy, EnemyStateMachine enemyStateMachine) : base(enemy, enemyStateMachine) {
@@ -36,12 +35,12 @@ public class AttackingState : EnemyState
 
             timer = 0f;
 
-            movementScript.ChangeHealth(-20f);
+            movementScript.ChangeHealth(enemy.DamageDelt);
 
 
         }
 
-        if (Vector3.Distance(enemy.PlayerTransform.position, enemy.transform.position) > distanceToCountExit) {
+        if (Vector3.Distance(enemy.PlayerTransform.position, enemy.transform.position) > enemy.AttackRange) {
             exitTimer += Time.deltaTime;
 
             if (exitTimer > timeTilExit) {
