@@ -79,6 +79,7 @@ public class EnemyAttackState : MonoBehaviour
             enemyMovement.StopMovement(); // This will stop their movement when attacking
         }
 
+        yield return new WaitForSeconds(0.2f);
 
         float elapsedTime = 0f;
         while (elapsedTime < 1f / attackSpeed)
