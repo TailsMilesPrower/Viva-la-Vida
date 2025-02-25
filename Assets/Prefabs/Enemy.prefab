@@ -120,8 +120,7 @@ GameObject:
   - component: {fileID: 714307211398968889}
   - component: {fileID: 7246697703473144453}
   - component: {fileID: 7988972446570014016}
-  - component: {fileID: 3550885502739654890}
-  - component: {fileID: 3317139124868306526}
+  - component: {fileID: 3694110888022399015}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -222,7 +221,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3550885502739654890
+--- !u!114 &3694110888022399015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,29 +230,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7793298037032126722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49b54f30ba538d74f8a3c09b3d2ed653, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fe2bfa8f84c3194cbc9398fcf547713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  player: {fileID: 0}
+  agent: {fileID: 0}
+  PlayerTransform: {fileID: 0}
   enemyNum: 0
---- !u!114 &3317139124868306526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7793298037032126722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 631fc5d365d654042a84f640ee985bc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftArm: {fileID: 331992772670104192}
-  rightArm: {fileID: 7517205062831909173}
-  attackRange: 1
-  attackSpeed: 2
-  attackDamage: 10
+  AttackRange: 1.5
+  RandomMoveRange: 5
 --- !u!1 &8984666713590915756
 GameObject:
   m_ObjectHideFlags: 0

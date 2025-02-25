@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyAttackState : MonoBehaviour
 {
-    /*
+    
     public Transform leftArm;
     public Transform rightArm;
 
@@ -117,5 +117,5 @@ public class EnemyAttackState : MonoBehaviour
         }
 
     }
-    */
+ 
 }

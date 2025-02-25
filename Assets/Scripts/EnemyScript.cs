@@ -4,7 +4,7 @@ using System.Collections;
 
 public class EnemyScript : MonoBehaviour
 {
-    /*
+    
     //A value for the enemy movement speed
     public float speed;
     
@@ -68,7 +68,7 @@ public class EnemyScript : MonoBehaviour
         transform.LookAt(player.transform.position);
 
        // nav.destination = playerTransform.position;
-
+        */
         
     }
 
@@ -135,5 +135,5 @@ public class EnemyScript : MonoBehaviour
         }
     }
     
-    */
+    
 }
