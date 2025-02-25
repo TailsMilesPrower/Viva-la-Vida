@@ -2332,7 +2332,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 93ade89f993de0e41ac1ae3d1b73be55, type: 2}
 --- !u!4 &955429787
 Transform:
   m_ObjectHideFlags: 0
@@ -4596,11 +4596,13 @@ MonoBehaviour:
   swordNeeded: 0
   bookNeeded: 0
   clothNeeded: 1
+  upperBathroom: 0
   player: {fileID: 0}
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
   playerInRange: 0
   placedObject: {fileID: 90215706}
+  keyItem: {fileID: 0}
 --- !u!1 &1650018848
 GameObject:
   m_ObjectHideFlags: 0

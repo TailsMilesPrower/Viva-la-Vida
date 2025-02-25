@@ -594,7 +594,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 93ade89f993de0e41ac1ae3d1b73be55, type: 2}
 --- !u!4 &335589150
 Transform:
   m_ObjectHideFlags: 0
@@ -1838,7 +1838,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 16288822}
+  m_Mesh: {fileID: 1410107719}
 --- !u!33 &914758190
 MeshFilter:
   m_ObjectHideFlags: 10
