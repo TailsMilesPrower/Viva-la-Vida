@@ -1,11 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour, IDamagable, IDistanceFinder
 {
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     public Transform PlayerTransform;
+
+    public Action OnDamage { get; set; } = delegate { };
 
     public float MaxHealth { get; set; } = 100f;
     public float currentHealth { get ; set; }
@@ -34,7 +37,6 @@ public class Enemy : MonoBehaviour, IDamagable, IDistanceFinder
     #region Idle Variables
 
     public float RandomMoveRange = 5f;
-    public float RandomMoveSpeed = 1f;
 
     #endregion
 
@@ -58,7 +60,7 @@ public class Enemy : MonoBehaviour, IDamagable, IDistanceFinder
 
     public void Damage(float DamageAmount) {
         currentHealth -= DamageAmount;
-
+        OnDamage?.Invoke();
         if (currentHealth <= 0) {
             Die();
         }

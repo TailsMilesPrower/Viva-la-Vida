@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class IdleState : EnemyState
 {
@@ -15,7 +16,6 @@ public class IdleState : EnemyState
     public override void EnterState() {
         base.EnterState();
         _targetPos = GetRandomPointInCircle();
-        Debug.Log("I am now Idling.");
     }
 
     public override void ExitState() {
@@ -24,10 +24,8 @@ public class IdleState : EnemyState
 
     public override void FrameUpdate() {
         base.FrameUpdate();
-        
-        _direction = (_targetPos - enemy.transform.position).normalized;
 
-        enemy.MoveEnemy(_direction);
+        enemy.MoveEnemy(_targetPos);
 
         if ((enemy.transform.position - _targetPos).sqrMagnitude < 0.01f) {
             _targetPos = GetRandomPointInCircle();
@@ -43,6 +41,9 @@ public class IdleState : EnemyState
     }
 
     private Vector3 GetRandomPointInCircle() {
-        return enemy.transform.position + (Vector3)UnityEngine.Random.insideUnitCircle * enemy.RandomMoveRange;
+
+        Vector3 result = new Vector3(enemy.transform.position.x + Random.Range(-5, 5), enemy.transform.position.y, enemy.transform.position.z + Random.Range(-5, 5));
+        return result;
+
     }
 }

@@ -13,7 +13,6 @@ public class ChasingState : EnemyState
 
     public override void EnterState() {
         base.EnterState();
-        Debug.Log("I am now chasing.");
     }
 
     public override void ExitState() {

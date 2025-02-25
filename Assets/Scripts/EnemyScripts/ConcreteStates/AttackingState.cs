@@ -21,7 +21,6 @@ public class AttackingState : EnemyState
 
     public override void EnterState() {
         base.EnterState();
-        Debug.Log("I am now attacking.");
     }
 
     public override void ExitState() {

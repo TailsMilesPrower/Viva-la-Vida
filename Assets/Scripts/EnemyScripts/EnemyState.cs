@@ -1,7 +1,7 @@
 using UnityEditor.MemoryProfiler;
 using UnityEngine;
 
-public class EnemyState
+public abstract class EnemyState
 {
     protected Enemy enemy;
     protected EnemyStateMachine enemyStateMachine;
