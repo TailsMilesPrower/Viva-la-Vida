@@ -62,7 +62,6 @@ public class Movement : MonoBehaviour
         {
             SceneManager.LoadScene("Death scene");
         }
-
     }
 
     // This one will be used with items/consumables
