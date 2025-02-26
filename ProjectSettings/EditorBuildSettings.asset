@@ -93,6 +93,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Rooms/Room2_14.unity
     guid: f966dfea6c9088041829d85bbaa540db
   - enabled: 1
+    path: Assets/Scenes/Main Rooms/RoomB.unity
+    guid: 978f2f7149a80e7429868e312d7e0c55
+  - enabled: 1
     path: Assets/Scenes/Main Rooms/KingsRoom.unity
     guid: 77a9da612f90707478037a0ee2294c48
   - enabled: 1
