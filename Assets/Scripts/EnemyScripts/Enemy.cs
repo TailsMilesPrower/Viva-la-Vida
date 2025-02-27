@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour, IDamagable, IDistanceFinder
 
     public float AttackRange;
 
+    public float DetectionDistance = 50f;
+
     #region Health Variables
     public Action OnDamage { get; set; } = delegate { };
 

@@ -8,6 +8,7 @@ public class SmallZombie : Enemy
         MaxHealth = 10;
         DamageDelt = -10;
         AttackRange = 1.5f;
+        DetectionDistance = 15f;
     }
 
     private void OnCollisionEnter(Collision collision) {

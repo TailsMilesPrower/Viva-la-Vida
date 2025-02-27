@@ -44,6 +44,7 @@ public class AttackingState : EnemyState
             exitTimer += Time.deltaTime;
 
             if (exitTimer > timeTilExit) {
+                timer = 0f;
                 enemy.AttackDistance(false);
                 enemyStateMachine.ChangeState(enemy.ChasingState);
             }
