@@ -3073,6 +3073,173 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1005948865
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1543613180}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2134571
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2134571
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2134571
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.291
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.869
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -34.371
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.23244767
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9726089
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 206.882
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      propertyPath: m_Name
+      value: Book1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3451118302482216456, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1005948870}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1005948869}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1005948868}
+  m_SourcePrefab: {fileID: 100100000, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+--- !u!4 &1005948866 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+  m_PrefabInstance: {fileID: 1005948865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1005948867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0e4683473d7ea2a47ad90ef393c48b80, type: 3}
+  m_PrefabInstance: {fileID: 1005948865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1005948868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005948867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca762171fbce39d42bb655084dc20f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialougeBox: {fileID: 0}
+  dialougeText: {fileID: 0}
+  dialouge:
+  - Astronomies always had a fascination for the outer planets, but people never
+    believed in anything they said, and they used to call them madmans.
+  - They never gave up, they worked hard towards their research, found old sources
+    and created many more. Some stood out to the rich people, and so, systems of
+    planets have been installed to entertains the big houses.
+  - Each planet had a name, both a greek and a roman name, each having an unique
+    explanation. (short list is at the end)
+  - The warmest of them all, the sun, was called Helios.
+  - The colossus was Jupiter, named after Zeus, the god of the sky.
+  - Right after Jupiter was Saturn, who gained its named due to its slow movement,
+    Kronos.
+  - Uranus comes next, which was named after the father of Saturn, Ouranos.
+  - Neptune gained its name due to the blue deep color, representing the sea god,
+    Poseidon.
+  - Our little planet, Earth, was named Gaia, which means "ground" and "soil".
+  - Venus was bright and beautiful, therefore named Aphrodite.
+  - Mars was named after the god of war, Ares, due to its blood-like color.
+  - Mercury moves so quick, winning its name after the fleet-of-food messenger god,
+    Hermes.
+  - Helios = Sol (Sun) Hermes = Mercury Aphrodite = Venus Gaia = Terra (Earth) Ares
+    = Mars Zeus = Jupiter Kronos = Saturn Ouranos = Uranus
+  playerInRange: 0
+  lineNumber: 0
+  outlineEneabled: 1
+--- !u!114 &1005948869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005948867}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!65 &1005948870
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005948867}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5671606, y: 0.46593586, z: 2.3572693}
+  m_Center: {x: 0.07187319, y: 0.23038034, z: -0.35684204}
 --- !u!1001 &1055522000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3597,7 +3764,7 @@ Transform:
   m_GameObject: {fileID: 1311650758}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.78706986, z: -0, w: 0.6168639}
-  m_LocalPosition: {x: -1.3294296, y: 2.1026292, z: 4.082321}
+  m_LocalPosition: {x: -2.22, y: 2.1026292, z: 9.01}
   m_LocalScale: {x: 1, y: 0.36278, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4181,11 +4348,13 @@ MonoBehaviour:
   swordNeeded: 0
   bookNeeded: 1
   clothNeeded: 0
+  upperBathroom: 0
   player: {fileID: 0}
   dialougeBox: {fileID: 0}
   dialougeText: {fileID: 0}
   playerInRange: 0
   placedObject: {fileID: 67566952}
+  keyItem: {fileID: 0}
 --- !u!114 &1467795010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4315,6 +4484,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1734918164}
+  - {fileID: 1005948866}
   - {fileID: 459540835}
   - {fileID: 1860416921}
   - {fileID: 742944951}
